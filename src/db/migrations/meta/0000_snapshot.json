@@ -1,0 +1,3957 @@
+{
+  "id": "709934ad-e4ec-4e4b-8b2e-9e8d2c2c53c0",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.contenant": {
+      "name": "contenant",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "reference": {
+          "name": "reference",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "nom": {
+          "name": "nom",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "cout_ht_centimes": {
+          "name": "cout_ht_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "taux_tva_bp": {
+          "name": "taux_tva_bp",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 2000
+        },
+        "capacite_points": {
+          "name": "capacite_points",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "longueur_mm": {
+          "name": "longueur_mm",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "largeur_mm": {
+          "name": "largeur_mm",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "hauteur_mm": {
+          "name": "hauteur_mm",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "poids_a_vide_g": {
+          "name": "poids_a_vide_g",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "gammes_compatibles": {
+          "name": "gammes_compatibles",
+          "type": "text[]",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "actif": {
+          "name": "actif",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": true
+        },
+        "cree_le": {
+          "name": "cree_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "modifie_le": {
+          "name": "modifie_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "contenant_reference_unique": {
+          "name": "contenant_reference_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "reference"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.disponibilite": {
+      "name": "disponibilite",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "produit_id": {
+          "name": "produit_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "annee_iso": {
+          "name": "annee_iso",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "semaine_iso": {
+          "name": "semaine_iso",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "disponible": {
+          "name": "disponible",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "quantite_indicative": {
+          "name": "quantite_indicative",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "commentaire": {
+          "name": "commentaire",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cree_le": {
+          "name": "cree_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "modifie_le": {
+          "name": "modifie_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "disponibilite_semaine_idx": {
+          "name": "disponibilite_semaine_idx",
+          "columns": [
+            {
+              "expression": "annee_iso",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "semaine_iso",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "disponible",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "disponibilite_produit_id_produit_id_fk": {
+          "name": "disponibilite_produit_id_produit_id_fk",
+          "tableFrom": "disponibilite",
+          "tableTo": "produit",
+          "columnsFrom": [
+            "produit_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "disponibilite_produit_semaine_unique": {
+          "name": "disponibilite_produit_semaine_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "produit_id",
+            "annee_iso",
+            "semaine_iso"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.producteur": {
+      "name": "producteur",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "reference": {
+          "name": "reference",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "nom": {
+          "name": "nom",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "role": {
+          "name": "role",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "canal_de_commande": {
+          "name": "canal_de_commande",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "contact_nom": {
+          "name": "contact_nom",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "telephone": {
+          "name": "telephone",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "site_internet": {
+          "name": "site_internet",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "adresse": {
+          "name": "adresse",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "code_postal": {
+          "name": "code_postal",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ville": {
+          "name": "ville",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "departement": {
+          "name": "departement",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "region": {
+          "name": "region",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "conditions_paiement": {
+          "name": "conditions_paiement",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "conditions_panachage": {
+          "name": "conditions_panachage",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "minimum_commande": {
+          "name": "minimum_commande",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "delais": {
+          "name": "delais",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "actif": {
+          "name": "actif",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": true
+        },
+        "cree_le": {
+          "name": "cree_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "modifie_le": {
+          "name": "modifie_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "producteur_nom_idx": {
+          "name": "producteur_nom_idx",
+          "columns": [
+            {
+              "expression": "nom",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "producteur_reference_unique": {
+          "name": "producteur_reference_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "reference"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.produit": {
+      "name": "produit",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "reference": {
+          "name": "reference",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "reference_fournisseur": {
+          "name": "reference_fournisseur",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nom": {
+          "name": "nom",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "description": {
+          "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "categorie": {
+          "name": "categorie",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "sous_categorie": {
+          "name": "sous_categorie",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "producteur_id": {
+          "name": "producteur_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "marque": {
+          "name": "marque",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "origine_pays": {
+          "name": "origine_pays",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "origine_region": {
+          "name": "origine_region",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "origine_departement": {
+          "name": "origine_departement",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "appellation": {
+          "name": "appellation",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "niveau_preuve_origine": {
+          "name": "niveau_preuve_origine",
+          "type": "niveau_preuve_origine",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'NON_DOCUMENTEE'"
+        },
+        "normandie_confirmee": {
+          "name": "normandie_confirmee",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "regime_alcool": {
+          "name": "regime_alcool",
+          "type": "regime_alcool",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'SANS_ALCOOL'"
+        },
+        "degre_alcool": {
+          "name": "degre_alcool",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "type_alcool": {
+          "name": "type_alcool",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "prix_achat_ht_centimes": {
+          "name": "prix_achat_ht_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "prix_vente_ht_centimes": {
+          "name": "prix_vente_ht_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "taux_tva_bp": {
+          "name": "taux_tva_bp",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "poids_net_g": {
+          "name": "poids_net_g",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "poids_brut_g": {
+          "name": "poids_brut_g",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "longueur_mm": {
+          "name": "longueur_mm",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "largeur_mm": {
+          "name": "largeur_mm",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "hauteur_mm": {
+          "name": "hauteur_mm",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "encombrement_points": {
+          "name": "encombrement_points",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "temperature": {
+          "name": "temperature",
+          "type": "temperature",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'AMBIANT'"
+        },
+        "expediable": {
+          "name": "expediable",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": true
+        },
+        "fragile": {
+          "name": "fragile",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "contient_verre": {
+          "name": "contient_verre",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "conditionnement": {
+          "name": "conditionnement",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "multiple_commande": {
+          "name": "multiple_commande",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "minimum_commande": {
+          "name": "minimum_commande",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "panachable": {
+          "name": "panachable",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "niveau_gamme": {
+          "name": "niveau_gamme",
+          "type": "niveau_gamme",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "bio": {
+          "name": "bio",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "allergenes": {
+          "name": "allergenes",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "url_photo": {
+          "name": "url_photo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ddm": {
+          "name": "ddm",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "score_completude": {
+          "name": "score_completude",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        },
+        "champs_a_confirmer": {
+          "name": "champs_a_confirmer",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "anomalie": {
+          "name": "anomalie",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "actif": {
+          "name": "actif",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "source": {
+          "name": "source",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ligne_source": {
+          "name": "ligne_source",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cree_le": {
+          "name": "cree_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "modifie_le": {
+          "name": "modifie_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "produit_categorie_idx": {
+          "name": "produit_categorie_idx",
+          "columns": [
+            {
+              "expression": "categorie",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "produit_producteur_idx": {
+          "name": "produit_producteur_idx",
+          "columns": [
+            {
+              "expression": "producteur_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "produit_actif_idx": {
+          "name": "produit_actif_idx",
+          "columns": [
+            {
+              "expression": "actif",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "produit_regime_alcool_idx": {
+          "name": "produit_regime_alcool_idx",
+          "columns": [
+            {
+              "expression": "regime_alcool",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "produit_gamme_idx": {
+          "name": "produit_gamme_idx",
+          "columns": [
+            {
+              "expression": "niveau_gamme",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "produit_producteur_id_producteur_id_fk": {
+          "name": "produit_producteur_id_producteur_id_fk",
+          "tableFrom": "produit",
+          "tableTo": "producteur",
+          "columnsFrom": [
+            "producteur_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "produit_reference_unique": {
+          "name": "produit_reference_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "reference"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.produit_prix_histo": {
+      "name": "produit_prix_histo",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "produit_id": {
+          "name": "produit_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "prix_achat_ht_centimes": {
+          "name": "prix_achat_ht_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "prix_vente_ht_centimes": {
+          "name": "prix_vente_ht_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "taux_tva_bp": {
+          "name": "taux_tva_bp",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "applicable_du": {
+          "name": "applicable_du",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "motif": {
+          "name": "motif",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {
+        "produit_prix_histo_produit_idx": {
+          "name": "produit_prix_histo_produit_idx",
+          "columns": [
+            {
+              "expression": "produit_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "applicable_du",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "produit_prix_histo_produit_id_produit_id_fk": {
+          "name": "produit_prix_histo_produit_id_produit_id_fk",
+          "tableFrom": "produit_prix_histo",
+          "tableTo": "produit",
+          "columnsFrom": [
+            "produit_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.produit_score": {
+      "name": "produit_score",
+      "schema": "",
+      "columns": {
+        "produit_id": {
+          "name": "produit_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "noblesse": {
+          "name": "noblesse",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "valeur_percue": {
+          "name": "valeur_percue",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "local": {
+          "name": "local",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "noel": {
+          "name": "noel",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "logistique": {
+          "name": "logistique",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cree_le": {
+          "name": "cree_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "modifie_le": {
+          "name": "modifie_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "produit_score_produit_id_produit_id_fk": {
+          "name": "produit_score_produit_id_produit_id_fk",
+          "tableFrom": "produit_score",
+          "tableTo": "produit",
+          "columnsFrom": [
+            "produit_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.produit_substitut": {
+      "name": "produit_substitut",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "produit_id": {
+          "name": "produit_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "substitut_id": {
+          "name": "substitut_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "rang": {
+          "name": "rang",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ecart_prix_pct": {
+          "name": "ecart_prix_pct",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "critere": {
+          "name": "critere",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cree_le": {
+          "name": "cree_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "modifie_le": {
+          "name": "modifie_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "produit_substitut_produit_idx": {
+          "name": "produit_substitut_produit_idx",
+          "columns": [
+            {
+              "expression": "produit_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "produit_substitut_produit_id_produit_id_fk": {
+          "name": "produit_substitut_produit_id_produit_id_fk",
+          "tableFrom": "produit_substitut",
+          "tableTo": "produit",
+          "columnsFrom": [
+            "produit_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "produit_substitut_substitut_id_produit_id_fk": {
+          "name": "produit_substitut_substitut_id_produit_id_fk",
+          "tableFrom": "produit_substitut",
+          "tableTo": "produit",
+          "columnsFrom": [
+            "substitut_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "produit_substitut_rang_unique": {
+          "name": "produit_substitut_rang_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "produit_id",
+            "rang"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.composition": {
+      "name": "composition",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "gabarit_id": {
+          "name": "gabarit_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "contenant_id": {
+          "name": "contenant_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "budget_cible_centimes": {
+          "name": "budget_cible_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "budget_net_centimes": {
+          "name": "budget_net_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total_ht_centimes": {
+          "name": "total_ht_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total_tva_centimes": {
+          "name": "total_tva_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total_ttc_centimes": {
+          "name": "total_ttc_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "cout_revient_ht_centimes": {
+          "name": "cout_revient_ht_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "taux_marge_bp": {
+          "name": "taux_marge_bp",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "taux_remplissage_bp": {
+          "name": "taux_remplissage_bp",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "empreinte": {
+          "name": "empreinte",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "annee_iso": {
+          "name": "annee_iso",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "semaine_iso": {
+          "name": "semaine_iso",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "figee": {
+          "name": "figee",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "cree_le": {
+          "name": "cree_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "modifie_le": {
+          "name": "modifie_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "composition_empreinte_idx": {
+          "name": "composition_empreinte_idx",
+          "columns": [
+            {
+              "expression": "empreinte",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "composition_gabarit_idx": {
+          "name": "composition_gabarit_idx",
+          "columns": [
+            {
+              "expression": "gabarit_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "composition_gabarit_id_gabarit_id_fk": {
+          "name": "composition_gabarit_id_gabarit_id_fk",
+          "tableFrom": "composition",
+          "tableTo": "gabarit",
+          "columnsFrom": [
+            "gabarit_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "set null",
+          "onUpdate": "no action"
+        },
+        "composition_contenant_id_contenant_id_fk": {
+          "name": "composition_contenant_id_contenant_id_fk",
+          "tableFrom": "composition",
+          "tableTo": "contenant",
+          "columnsFrom": [
+            "contenant_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "set null",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.composition_ligne": {
+      "name": "composition_ligne",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "composition_id": {
+          "name": "composition_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "produit_id": {
+          "name": "produit_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "slot_id": {
+          "name": "slot_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "position": {
+          "name": "position",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantite": {
+          "name": "quantite",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 1
+        },
+        "prix_unitaire_ht_centimes": {
+          "name": "prix_unitaire_ht_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "taux_tva_bp": {
+          "name": "taux_tva_bp",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "prix_achat_unitaire_ht_centimes": {
+          "name": "prix_achat_unitaire_ht_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "choix_client": {
+          "name": "choix_client",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "cree_le": {
+          "name": "cree_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "modifie_le": {
+          "name": "modifie_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "composition_ligne_produit_idx": {
+          "name": "composition_ligne_produit_idx",
+          "columns": [
+            {
+              "expression": "produit_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "composition_ligne_composition_id_composition_id_fk": {
+          "name": "composition_ligne_composition_id_composition_id_fk",
+          "tableFrom": "composition_ligne",
+          "tableTo": "composition",
+          "columnsFrom": [
+            "composition_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "composition_ligne_produit_id_produit_id_fk": {
+          "name": "composition_ligne_produit_id_produit_id_fk",
+          "tableFrom": "composition_ligne",
+          "tableTo": "produit",
+          "columnsFrom": [
+            "produit_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "composition_ligne_slot_id_gabarit_slot_id_fk": {
+          "name": "composition_ligne_slot_id_gabarit_slot_id_fk",
+          "tableFrom": "composition_ligne",
+          "tableTo": "gabarit_slot",
+          "columnsFrom": [
+            "slot_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "set null",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "composition_ligne_position_unique": {
+          "name": "composition_ligne_position_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "composition_id",
+            "position"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.gabarit": {
+      "name": "gabarit",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "code": {
+          "name": "code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "nom": {
+          "name": "nom",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "description": {
+          "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "gamme": {
+          "name": "gamme",
+          "type": "niveau_gamme",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pieces_min": {
+          "name": "pieces_min",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 3
+        },
+        "pieces_max": {
+          "name": "pieces_max",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 8
+        },
+        "contraintes": {
+          "name": "contraintes",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'{}'::jsonb"
+        },
+        "ordre_affichage": {
+          "name": "ordre_affichage",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        },
+        "actif": {
+          "name": "actif",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": true
+        },
+        "cree_le": {
+          "name": "cree_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "modifie_le": {
+          "name": "modifie_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "gabarit_code_unique": {
+          "name": "gabarit_code_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "code"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.gabarit_slot": {
+      "name": "gabarit_slot",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "gabarit_id": {
+          "name": "gabarit_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "position": {
+          "name": "position",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "role": {
+          "name": "role",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "categories_admises": {
+          "name": "categories_admises",
+          "type": "text[]",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "sous_categories_exclues": {
+          "name": "sous_categories_exclues",
+          "type": "text[]",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "part_cible_bp": {
+          "name": "part_cible_bp",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "part_max_bp": {
+          "name": "part_max_bp",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "requis": {
+          "name": "requis",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": true
+        },
+        "cree_le": {
+          "name": "cree_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "modifie_le": {
+          "name": "modifie_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "gabarit_slot_gabarit_id_gabarit_id_fk": {
+          "name": "gabarit_slot_gabarit_id_gabarit_id_fk",
+          "tableFrom": "gabarit_slot",
+          "tableTo": "gabarit",
+          "columnsFrom": [
+            "gabarit_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "gabarit_slot_position_unique": {
+          "name": "gabarit_slot_position_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "gabarit_id",
+            "position"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.adresse": {
+      "name": "adresse",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "client_id": {
+          "name": "client_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "libelle": {
+          "name": "libelle",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "destinataire": {
+          "name": "destinataire",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "societe": {
+          "name": "societe",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ligne1": {
+          "name": "ligne1",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ligne2": {
+          "name": "ligne2",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "code_postal": {
+          "name": "code_postal",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ville": {
+          "name": "ville",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "pays": {
+          "name": "pays",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'FR'"
+        },
+        "telephone": {
+          "name": "telephone",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "facturation": {
+          "name": "facturation",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "cree_le": {
+          "name": "cree_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "modifie_le": {
+          "name": "modifie_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "adresse_client_idx": {
+          "name": "adresse_client_idx",
+          "columns": [
+            {
+              "expression": "client_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "adresse_client_id_client_id_fk": {
+          "name": "adresse_client_id_client_id_fk",
+          "tableFrom": "adresse",
+          "tableTo": "client",
+          "columnsFrom": [
+            "client_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.client": {
+      "name": "client",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "auth_user_id": {
+          "name": "auth_user_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "type": {
+          "name": "type",
+          "type": "type_client",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'PARTICULIER'"
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "prenom": {
+          "name": "prenom",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nom": {
+          "name": "nom",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "telephone": {
+          "name": "telephone",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "raison_sociale": {
+          "name": "raison_sociale",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "siret": {
+          "name": "siret",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tva_intracom": {
+          "name": "tva_intracom",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "statut_validation_pro": {
+          "name": "statut_validation_pro",
+          "type": "statut_validation_pro",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'NON_APPLICABLE'"
+        },
+        "valide_par": {
+          "name": "valide_par",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "valide_le": {
+          "name": "valide_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "afficher_ht": {
+          "name": "afficher_ht",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "cree_le": {
+          "name": "cree_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "modifie_le": {
+          "name": "modifie_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "client_type_idx": {
+          "name": "client_type_idx",
+          "columns": [
+            {
+              "expression": "type",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "client_authUserId_unique": {
+          "name": "client_authUserId_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "auth_user_id"
+          ]
+        },
+        "client_email_unique": {
+          "name": "client_email_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "email"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.commande": {
+      "name": "commande",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "numero": {
+          "name": "numero",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "devis_id": {
+          "name": "devis_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "client_id": {
+          "name": "client_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "commande_mere_id": {
+          "name": "commande_mere_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "etat": {
+          "name": "etat",
+          "type": "etat_commande",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'EN_ATTENTE_PAIEMENT'"
+        },
+        "adresse_livraison_id": {
+          "name": "adresse_livraison_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "adresse_facturation_id": {
+          "name": "adresse_facturation_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total_ht_centimes": {
+          "name": "total_ht_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        },
+        "total_tva_centimes": {
+          "name": "total_tva_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        },
+        "total_ttc_centimes": {
+          "name": "total_ttc_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        },
+        "remise_centimes": {
+          "name": "remise_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        },
+        "ventilation_tva": {
+          "name": "ventilation_tva",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'[]'::jsonb"
+        },
+        "annee_iso": {
+          "name": "annee_iso",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "semaine_iso": {
+          "name": "semaine_iso",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "date_livraison_souhaitee": {
+          "name": "date_livraison_souhaitee",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "message_cadeau": {
+          "name": "message_cadeau",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cgv_version_id": {
+          "name": "cgv_version_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cree_le": {
+          "name": "cree_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "modifie_le": {
+          "name": "modifie_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "commande_etat_idx": {
+          "name": "commande_etat_idx",
+          "columns": [
+            {
+              "expression": "etat",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "commande_semaine_idx": {
+          "name": "commande_semaine_idx",
+          "columns": [
+            {
+              "expression": "annee_iso",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "semaine_iso",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "commande_mere_idx": {
+          "name": "commande_mere_idx",
+          "columns": [
+            {
+              "expression": "commande_mere_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "commande_devis_id_devis_id_fk": {
+          "name": "commande_devis_id_devis_id_fk",
+          "tableFrom": "commande",
+          "tableTo": "devis",
+          "columnsFrom": [
+            "devis_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "set null",
+          "onUpdate": "no action"
+        },
+        "commande_client_id_client_id_fk": {
+          "name": "commande_client_id_client_id_fk",
+          "tableFrom": "commande",
+          "tableTo": "client",
+          "columnsFrom": [
+            "client_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "commande_adresse_livraison_id_adresse_id_fk": {
+          "name": "commande_adresse_livraison_id_adresse_id_fk",
+          "tableFrom": "commande",
+          "tableTo": "adresse",
+          "columnsFrom": [
+            "adresse_livraison_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "set null",
+          "onUpdate": "no action"
+        },
+        "commande_adresse_facturation_id_adresse_id_fk": {
+          "name": "commande_adresse_facturation_id_adresse_id_fk",
+          "tableFrom": "commande",
+          "tableTo": "adresse",
+          "columnsFrom": [
+            "adresse_facturation_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "set null",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "commande_numero_unique": {
+          "name": "commande_numero_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "numero"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.commande_ligne": {
+      "name": "commande_ligne",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "commande_id": {
+          "name": "commande_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "produit_id": {
+          "name": "produit_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "composition_id": {
+          "name": "composition_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "libelle": {
+          "name": "libelle",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "nature": {
+          "name": "nature",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'PRODUIT'"
+        },
+        "quantite": {
+          "name": "quantite",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 1
+        },
+        "prix_unitaire_ht_centimes": {
+          "name": "prix_unitaire_ht_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "taux_tva_bp": {
+          "name": "taux_tva_bp",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "position": {
+          "name": "position",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "cree_le": {
+          "name": "cree_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "modifie_le": {
+          "name": "modifie_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "commande_ligne_commande_idx": {
+          "name": "commande_ligne_commande_idx",
+          "columns": [
+            {
+              "expression": "commande_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "commande_ligne_produit_idx": {
+          "name": "commande_ligne_produit_idx",
+          "columns": [
+            {
+              "expression": "produit_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "commande_ligne_commande_id_commande_id_fk": {
+          "name": "commande_ligne_commande_id_commande_id_fk",
+          "tableFrom": "commande_ligne",
+          "tableTo": "commande",
+          "columnsFrom": [
+            "commande_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "commande_ligne_produit_id_produit_id_fk": {
+          "name": "commande_ligne_produit_id_produit_id_fk",
+          "tableFrom": "commande_ligne",
+          "tableTo": "produit",
+          "columnsFrom": [
+            "produit_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "commande_ligne_composition_id_composition_id_fk": {
+          "name": "commande_ligne_composition_id_composition_id_fk",
+          "tableFrom": "commande_ligne",
+          "tableTo": "composition",
+          "columnsFrom": [
+            "composition_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "set null",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.destinataire": {
+      "name": "destinataire",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "commande_mere_id": {
+          "name": "commande_mere_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "commande_fille_id": {
+          "name": "commande_fille_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nom": {
+          "name": "nom",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "societe": {
+          "name": "societe",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ligne1": {
+          "name": "ligne1",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ligne2": {
+          "name": "ligne2",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "code_postal": {
+          "name": "code_postal",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ville": {
+          "name": "ville",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "pays": {
+          "name": "pays",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'FR'"
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "telephone": {
+          "name": "telephone",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "message_cadeau": {
+          "name": "message_cadeau",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nombre_coffrets": {
+          "name": "nombre_coffrets",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 1
+        },
+        "cree_le": {
+          "name": "cree_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "modifie_le": {
+          "name": "modifie_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "destinataire_commande_idx": {
+          "name": "destinataire_commande_idx",
+          "columns": [
+            {
+              "expression": "commande_mere_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "destinataire_commande_mere_id_commande_id_fk": {
+          "name": "destinataire_commande_mere_id_commande_id_fk",
+          "tableFrom": "destinataire",
+          "tableTo": "commande",
+          "columnsFrom": [
+            "commande_mere_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "destinataire_commande_fille_id_commande_id_fk": {
+          "name": "destinataire_commande_fille_id_commande_id_fk",
+          "tableFrom": "destinataire",
+          "tableTo": "commande",
+          "columnsFrom": [
+            "commande_fille_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "set null",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.devis": {
+      "name": "devis",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "numero": {
+          "name": "numero",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "client_id": {
+          "name": "client_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "type_projet": {
+          "name": "type_projet",
+          "type": "type_projet",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "etat": {
+          "name": "etat",
+          "type": "etat_devis",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'BROUILLON'"
+        },
+        "nombre_coffrets": {
+          "name": "nombre_coffrets",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "budget_par_coffret_centimes": {
+          "name": "budget_par_coffret_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "preferences": {
+          "name": "preferences",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'{}'::jsonb"
+        },
+        "total_ht_centimes": {
+          "name": "total_ht_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        },
+        "total_tva_centimes": {
+          "name": "total_tva_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        },
+        "total_ttc_centimes": {
+          "name": "total_ttc_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        },
+        "remise_centimes": {
+          "name": "remise_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        },
+        "ventilation_tva": {
+          "name": "ventilation_tva",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'[]'::jsonb"
+        },
+        "jeton_public": {
+          "name": "jeton_public",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "valable_jusquau": {
+          "name": "valable_jusquau",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "envoye_le": {
+          "name": "envoye_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "vu_le": {
+          "name": "vu_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "accepte_le": {
+          "name": "accepte_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "refuse_le": {
+          "name": "refuse_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cgv_version_id": {
+          "name": "cgv_version_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "motif_validation_manuelle": {
+          "name": "motif_validation_manuelle",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "url_pdf": {
+          "name": "url_pdf",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cree_le": {
+          "name": "cree_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "modifie_le": {
+          "name": "modifie_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "devis_etat_idx": {
+          "name": "devis_etat_idx",
+          "columns": [
+            {
+              "expression": "etat",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "devis_client_idx": {
+          "name": "devis_client_idx",
+          "columns": [
+            {
+              "expression": "client_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "devis_cree_le_idx": {
+          "name": "devis_cree_le_idx",
+          "columns": [
+            {
+              "expression": "cree_le",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "devis_client_id_client_id_fk": {
+          "name": "devis_client_id_client_id_fk",
+          "tableFrom": "devis",
+          "tableTo": "client",
+          "columnsFrom": [
+            "client_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "set null",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "devis_numero_unique": {
+          "name": "devis_numero_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "numero"
+          ]
+        },
+        "devis_jetonPublic_unique": {
+          "name": "devis_jetonPublic_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "jeton_public"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.devis_composition": {
+      "name": "devis_composition",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "devis_id": {
+          "name": "devis_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "composition_id": {
+          "name": "composition_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantite": {
+          "name": "quantite",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 1
+        },
+        "retenue": {
+          "name": "retenue",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "cree_le": {
+          "name": "cree_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "modifie_le": {
+          "name": "modifie_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "devis_composition_devis_id_devis_id_fk": {
+          "name": "devis_composition_devis_id_devis_id_fk",
+          "tableFrom": "devis_composition",
+          "tableTo": "devis",
+          "columnsFrom": [
+            "devis_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "devis_composition_composition_id_composition_id_fk": {
+          "name": "devis_composition_composition_id_composition_id_fk",
+          "tableFrom": "devis_composition",
+          "tableTo": "composition",
+          "columnsFrom": [
+            "composition_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "devis_composition_unique": {
+          "name": "devis_composition_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "devis_id",
+            "composition_id"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.facture": {
+      "name": "facture",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "numero": {
+          "name": "numero",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "commande_id": {
+          "name": "commande_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "paiement_id": {
+          "name": "paiement_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "est_acompte": {
+          "name": "est_acompte",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "total_ht_centimes": {
+          "name": "total_ht_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total_tva_centimes": {
+          "name": "total_tva_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "total_ttc_centimes": {
+          "name": "total_ttc_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ventilation_tva": {
+          "name": "ventilation_tva",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'[]'::jsonb"
+        },
+        "emise_le": {
+          "name": "emise_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "url_pdf": {
+          "name": "url_pdf",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cree_le": {
+          "name": "cree_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "modifie_le": {
+          "name": "modifie_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "facture_commande_idx": {
+          "name": "facture_commande_idx",
+          "columns": [
+            {
+              "expression": "commande_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "facture_commande_id_commande_id_fk": {
+          "name": "facture_commande_id_commande_id_fk",
+          "tableFrom": "facture",
+          "tableTo": "commande",
+          "columnsFrom": [
+            "commande_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "facture_paiement_id_paiement_id_fk": {
+          "name": "facture_paiement_id_paiement_id_fk",
+          "tableFrom": "facture",
+          "tableTo": "paiement",
+          "columnsFrom": [
+            "paiement_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "set null",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "facture_numero_unique": {
+          "name": "facture_numero_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "numero"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.paiement": {
+      "name": "paiement",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "commande_id": {
+          "name": "commande_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "type": {
+          "name": "type",
+          "type": "type_paiement",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "statut": {
+          "name": "statut",
+          "type": "statut_paiement",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'EN_ATTENTE'"
+        },
+        "montant_ttc_centimes": {
+          "name": "montant_ttc_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ventilation_tva": {
+          "name": "ventilation_tva",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'[]'::jsonb"
+        },
+        "stripe_payment_intent_id": {
+          "name": "stripe_payment_intent_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stripe_checkout_session_id": {
+          "name": "stripe_checkout_session_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "confirme_par_webhook_le": {
+          "name": "confirme_par_webhook_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cree_le": {
+          "name": "cree_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "modifie_le": {
+          "name": "modifie_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "paiement_commande_idx": {
+          "name": "paiement_commande_idx",
+          "columns": [
+            {
+              "expression": "commande_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "paiement_commande_id_commande_id_fk": {
+          "name": "paiement_commande_id_commande_id_fk",
+          "tableFrom": "paiement",
+          "tableTo": "commande",
+          "columnsFrom": [
+            "commande_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "paiement_stripePaymentIntentId_unique": {
+          "name": "paiement_stripePaymentIntentId_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "stripe_payment_intent_id"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.substitution": {
+      "name": "substitution",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "commande_ligne_id": {
+          "name": "commande_ligne_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "produit_prevu_id": {
+          "name": "produit_prevu_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "produit_livre_id": {
+          "name": "produit_livre_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "motif": {
+          "name": "motif",
+          "type": "motif_substitution",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "commentaire": {
+          "name": "commentaire",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ecart_valeur_centimes": {
+          "name": "ecart_valeur_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "operateur": {
+          "name": "operateur",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "cree_le": {
+          "name": "cree_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "substitution_ligne_idx": {
+          "name": "substitution_ligne_idx",
+          "columns": [
+            {
+              "expression": "commande_ligne_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "substitution_commande_ligne_id_commande_ligne_id_fk": {
+          "name": "substitution_commande_ligne_id_commande_ligne_id_fk",
+          "tableFrom": "substitution",
+          "tableTo": "commande_ligne",
+          "columnsFrom": [
+            "commande_ligne_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "substitution_produit_prevu_id_produit_id_fk": {
+          "name": "substitution_produit_prevu_id_produit_id_fk",
+          "tableFrom": "substitution",
+          "tableTo": "produit",
+          "columnsFrom": [
+            "produit_prevu_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "substitution_produit_livre_id_produit_id_fk": {
+          "name": "substitution_produit_livre_id_produit_id_fk",
+          "tableFrom": "substitution",
+          "tableTo": "produit",
+          "columnsFrom": [
+            "produit_livre_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.cgv_version": {
+      "name": "cgv_version",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "cible": {
+          "name": "cible",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "version": {
+          "name": "version",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "contenu": {
+          "name": "contenu",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "entree_en_vigueur_le": {
+          "name": "entree_en_vigueur_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "cree_le": {
+          "name": "cree_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "modifie_le": {
+          "name": "modifie_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "cgv_version_unique": {
+          "name": "cgv_version_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "cible",
+            "version"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.consentement": {
+      "name": "consentement",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "finalite": {
+          "name": "finalite",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "base_legale": {
+          "name": "base_legale",
+          "type": "base_legale_consentement",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "accorde": {
+          "name": "accorde",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "preuve": {
+          "name": "preuve",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "adresse_ip": {
+          "name": "adresse_ip",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "recueilli_le": {
+          "name": "recueilli_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "retire_le": {
+          "name": "retire_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cree_le": {
+          "name": "cree_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "modifie_le": {
+          "name": "modifie_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "consentement_email_idx": {
+          "name": "consentement_email_idx",
+          "columns": [
+            {
+              "expression": "email",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.journal_audit": {
+      "name": "journal_audit",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "evenement": {
+          "name": "evenement",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "entite": {
+          "name": "entite",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "entite_id": {
+          "name": "entite_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "acteur": {
+          "name": "acteur",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "details": {
+          "name": "details",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'{}'::jsonb"
+        },
+        "cree_le": {
+          "name": "cree_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "journal_audit_evenement_idx": {
+          "name": "journal_audit_evenement_idx",
+          "columns": [
+            {
+              "expression": "evenement",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "cree_le",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "journal_audit_entite_idx": {
+          "name": "journal_audit_entite_idx",
+          "columns": [
+            {
+              "expression": "entite",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "entite_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.liste_courses": {
+      "name": "liste_courses",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "annee_iso": {
+          "name": "annee_iso",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "semaine_iso": {
+          "name": "semaine_iso",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "generee_le": {
+          "name": "generee_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "generee_par": {
+          "name": "generee_par",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nombre_commandes": {
+          "name": "nombre_commandes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        },
+        "total_achat_ht_centimes": {
+          "name": "total_achat_ht_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        },
+        "cree_le": {
+          "name": "cree_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "modifie_le": {
+          "name": "modifie_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "liste_courses_semaine_unique": {
+          "name": "liste_courses_semaine_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "annee_iso",
+            "semaine_iso"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.liste_courses_ligne": {
+      "name": "liste_courses_ligne",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "liste_id": {
+          "name": "liste_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "producteur_id": {
+          "name": "producteur_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "produit_id": {
+          "name": "produit_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantite_requise": {
+          "name": "quantite_requise",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "quantite_a_commander": {
+          "name": "quantite_a_commander",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "surplus": {
+          "name": "surplus",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 0
+        },
+        "prix_achat_unitaire_ht_centimes": {
+          "name": "prix_achat_unitaire_ht_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total_achat_ht_centimes": {
+          "name": "total_achat_ht_centimes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "commandee": {
+          "name": "commandee",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "recue": {
+          "name": "recue",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "cree_le": {
+          "name": "cree_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "modifie_le": {
+          "name": "modifie_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "liste_courses_ligne_liste_idx": {
+          "name": "liste_courses_ligne_liste_idx",
+          "columns": [
+            {
+              "expression": "liste_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "liste_courses_ligne_producteur_idx": {
+          "name": "liste_courses_ligne_producteur_idx",
+          "columns": [
+            {
+              "expression": "producteur_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "liste_courses_ligne_liste_id_liste_courses_id_fk": {
+          "name": "liste_courses_ligne_liste_id_liste_courses_id_fk",
+          "tableFrom": "liste_courses_ligne",
+          "tableTo": "liste_courses",
+          "columnsFrom": [
+            "liste_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "liste_courses_ligne_producteur_id_producteur_id_fk": {
+          "name": "liste_courses_ligne_producteur_id_producteur_id_fk",
+          "tableFrom": "liste_courses_ligne",
+          "tableTo": "producteur",
+          "columnsFrom": [
+            "producteur_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "set null",
+          "onUpdate": "no action"
+        },
+        "liste_courses_ligne_produit_id_produit_id_fk": {
+          "name": "liste_courses_ligne_produit_id_produit_id_fk",
+          "tableFrom": "liste_courses_ligne",
+          "tableTo": "produit",
+          "columnsFrom": [
+            "produit_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.parametre_moteur": {
+      "name": "parametre_moteur",
+      "schema": "",
+      "columns": {
+        "cle": {
+          "name": "cle",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "valeur": {
+          "name": "valeur",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "unite": {
+          "name": "unite",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "description": {
+          "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cree_le": {
+          "name": "cree_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "modifie_le": {
+          "name": "modifie_le",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {
+    "public.base_legale_consentement": {
+      "name": "base_legale_consentement",
+      "schema": "public",
+      "values": [
+        "CONSENTEMENT",
+        "CONTRAT",
+        "INTERET_LEGITIME",
+        "OBLIGATION_LEGALE"
+      ]
+    },
+    "public.etat_commande": {
+      "name": "etat_commande",
+      "schema": "public",
+      "values": [
+        "EN_ATTENTE_PAIEMENT",
+        "CONFIRMEE",
+        "EN_PREPARATION",
+        "PREPAREE",
+        "EXPEDIEE",
+        "LIVREE",
+        "ANNULEE"
+      ]
+    },
+    "public.etat_devis": {
+      "name": "etat_devis",
+      "schema": "public",
+      "values": [
+        "BROUILLON",
+        "A_VALIDER",
+        "ENVOYE",
+        "VU",
+        "ACCEPTE",
+        "ACOMPTE_PAYE",
+        "CONFIRMEE",
+        "REFUSE",
+        "EXPIRE"
+      ]
+    },
+    "public.motif_substitution": {
+      "name": "motif_substitution",
+      "schema": "public",
+      "values": [
+        "RUPTURE_PRODUCTEUR",
+        "QUALITE_INSUFFISANTE",
+        "RETARD_LIVRAISON",
+        "AUTRE"
+      ]
+    },
+    "public.niveau_gamme": {
+      "name": "niveau_gamme",
+      "schema": "public",
+      "values": [
+        "ESSENTIEL",
+        "SIGNATURE",
+        "PREMIUM",
+        "PRESTIGE"
+      ]
+    },
+    "public.niveau_preuve_origine": {
+      "name": "niveau_preuve_origine",
+      "schema": "public",
+      "values": [
+        "ADRESSE_PRODUCTEUR_DANS_LE_DOCUMENT",
+        "APPELLATION_PROTEGEE_CITEE_DANS_LE_DOCUMENT",
+        "APPELLATION_PORTANT_SUR_UN_INGREDIENT_SEULEMENT",
+        "INDICE_DANS_LE_NOM_DU_PRODUIT_SEULEMENT",
+        "NON_DOCUMENTEE"
+      ]
+    },
+    "public.regime_alcool": {
+      "name": "regime_alcool",
+      "schema": "public",
+      "values": [
+        "SANS_ALCOOL",
+        "INGREDIENT_ALCOOLISE",
+        "BOISSON_ALCOOLISEE"
+      ]
+    },
+    "public.statut_paiement": {
+      "name": "statut_paiement",
+      "schema": "public",
+      "values": [
+        "EN_ATTENTE",
+        "REUSSI",
+        "ECHOUE",
+        "REMBOURSE"
+      ]
+    },
+    "public.statut_validation_pro": {
+      "name": "statut_validation_pro",
+      "schema": "public",
+      "values": [
+        "NON_APPLICABLE",
+        "EN_ATTENTE",
+        "VALIDE",
+        "REFUSE"
+      ]
+    },
+    "public.temperature": {
+      "name": "temperature",
+      "schema": "public",
+      "values": [
+        "AMBIANT",
+        "FRAIS",
+        "SURGELE"
+      ]
+    },
+    "public.type_client": {
+      "name": "type_client",
+      "schema": "public",
+      "values": [
+        "PARTICULIER",
+        "PROFESSIONNEL"
+      ]
+    },
+    "public.type_paiement": {
+      "name": "type_paiement",
+      "schema": "public",
+      "values": [
+        "ACOMPTE",
+        "SOLDE",
+        "INTEGRAL"
+      ]
+    },
+    "public.type_projet": {
+      "name": "type_projet",
+      "schema": "public",
+      "values": [
+        "CADEAUX_CLIENTS",
+        "CADEAUX_SALARIES",
+        "CSE",
+        "PARTICULIER"
+      ]
+    }
+  },
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
