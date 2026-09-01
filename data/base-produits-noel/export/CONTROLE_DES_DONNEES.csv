@@ -9,17 +9,20 @@ Produits sans prix,0,
 Produits sans fournisseur,0,
 Produits sans producteur identifié,0,
 Produits sans TVA indiquée,42,
-Produits sans origine documentée,612,Règle stricte : un produit n'est pas normand parce qu'il est distribué par une entreprise normande
-Produits normands confirmés,68,"Preuve = adresse du producteur dans son propre tarif, ou appellation protégée citée"
-dont Calvados (14),41,
-dont Manche (50),4,
-dont Orne (61),0,
-dont département normand à confirmer,23,
-Produits portant un indice de normandité dans leur seul nom,107,À vérifier : un nom commercial n'est pas une preuve d'origine
-Produits français confirmés,68,
-Produits d'origine non déterminée,634,
-Produits AVEC alcool (boisson alcoolisée),139,
-Produits SANS alcool,530,
+Produits sans origine documentée,0,Règle stricte : un produit n'est pas normand parce qu'il est distribué par une entreprise normande
+Produits normands confirmés,702,"Preuve = adresse du producteur dans son propre tarif, ou appellation protégée citée"
+dont Calvados (14),388,
+dont Manche (50),306,
+dont Orne (61),2,
+dont Eure (27),2,
+dont Seine-Maritime (76),4,
+Produits transformés en Normandie à partir d'une matière première non française,105,"Café, thé, cacao, fruits exotiques : à ne pas présenter comme « 100 % local »"
+dont département normand à confirmer,0,
+Produits portant un indice de normandité dans leur seul nom,0,À vérifier : un nom commercial n'est pas une preuve d'origine
+Produits français confirmés,702,
+Produits d'origine non déterminée,0,
+Produits AVEC alcool (boisson alcoolisée),140,
+Produits SANS alcool,529,
 Produits contenant de l'alcool comme ingrédient,33,Ni « avec alcool » ni totalement neutre : à arbitrer pour les coffrets sans alcool
 Produits personnalisables (documenté),0,"Aucun document fourni ne mentionne de personnalisation (marquage, gravure, étiquette)"
 Produits dont la personnalisation reste à confirmer,702,
@@ -34,8 +37,10 @@ Produits avec poids net lu dans le document,481,
 Produits avec volume lu dans le document,209,
 Produits sans poids ni volume,12,
 Produits avec dimensions renseignées,0,Aucun document ne contient de dimensions : longueur/largeur/hauteur à mesurer ou à demander
-Produits avec prix de vente renseigné,0,"Aucun prix de vente n'existe : marge, taux de marge et scores de marge non calculables"
+Produits avec prix de vente proposé,701,"PROPOSITION : coefficients de marché (build/coefficients_prix.csv), non issus des documents"
+Taux de marge médian sur le prix de vente proposé,54.9 %,À valider avant toute mise en vente
+Produits sans prix de vente,1,Produits dont le prix d'achat est nul ou absent
 Emballages référencés,0,Base EMBALLAGES à alimenter (aucun tarif emballage fourni)
 Tarifs de transport référencés,0,Base TARIFS_TRANSPORT à alimenter
-Alternatives produits calculées,3020,"Même sous-catégorie, même régime alcool, écart de prix ≤ 40 %"
-Total de champs marqués À CONFIRMER,24153,
+Alternatives produits calculées,3030,"Même sous-catégorie, même régime alcool, écart de prix ≤ 40 %"
+Total de champs marqués À CONFIRMER,19772,

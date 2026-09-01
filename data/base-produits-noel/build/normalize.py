@@ -14,6 +14,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 import rules as R  # noqa: E402
+import pricing as PRICING  # noqa: E402
 
 BASE = Path(__file__).resolve().parent.parent
 RAW = BASE / "raw"
@@ -50,7 +51,27 @@ def num(value):
 # ==========================================================================
 # 1. Fournisseurs
 # ==========================================================================
-referentiel = {r["cle_source"]: r for r in read_csv("../build/referentiel_fournisseurs.csv")}
+_ref_rows = read_csv("../build/referentiel_fournisseurs.csv")
+referentiel = {r["cle_source"]: r for r in _ref_rows}
+# Index normalise : les documents melangent apostrophes droites et typographiques
+# (« POM' POM' » et « POM’ POM’ » designent le meme producteur).
+referentiel_normalise = {R.normalize_key(r["cle_source"]): r for r in _ref_rows}
+
+
+def ref_producteur(nom):
+    return referentiel.get(nom) or referentiel_normalise.get(R.normalize_key(nom))
+
+
+DEPARTEMENTS = {
+    "14": "Calvados (14)", "27": "Eure (27)", "50": "Manche (50)",
+    "61": "Orne (61)", "76": "Seine-Maritime (76)",
+}
+
+
+def normaliser_departement(valeur):
+    """Le referentiel melange « 14 » et « Calvados (14) »."""
+    v = (valeur or "").strip().replace("Seine Maritime", "Seine-Maritime")
+    return DEPARTEMENTS.get(v, v)
 
 fournisseurs = {}   # nom_normalise -> dict
 _next_four = [0]
@@ -63,7 +84,7 @@ def get_fournisseur(nom, role, canal, source, libelle_source=""):
         if libelle_source and libelle_source not in f["libelles_source"]:
             f["libelles_source"].append(libelle_source)
         return f
-    ref = referentiel.get(nom, {})
+    ref = referentiel.get(nom) or referentiel_normalise.get(R.normalize_key(nom)) or {}
     _next_four[0] += 1
     f = {
         "id_fournisseur": f"FOUR-{_next_four[0]:04d}",
@@ -141,6 +162,7 @@ def base_produit(**kw):
         "origine_pays": A, "origine_region": A, "origine_departement": A,
         "lieu_fabrication": A, "appellation": "", "niveau_preuve_origine": "",
         "caractere_local": A, "savoir_faire_francais": A,
+        "alerte_matiere_premiere": "",
         # caracteristiques
         "poids_net_g": "", "volume_ml": "", "mention_poids_volume_source": "",
         "degre_alcool": "", "alcool": A, "type_alcool": "",
@@ -153,6 +175,7 @@ def base_produit(**kw):
         # prix de vente (a definir : aucun document ne les contient)
         "prix_vente_ht": "", "prix_vente_ttc": "", "marge_eur": "",
         "taux_marge": "", "prix_min_acceptable": "", "prix_max_conseille": "",
+        "coefficient_applique": "", "calcul_prix_vente": "", "statut_prix_vente": "",
         # conditionnement / commande
         "conditionnement": A, "quantite_par_conditionnement": "",
         "multiple_commande_source": "", "multiple_commande_valeur": "",
@@ -190,6 +213,7 @@ def finaliser(p, fournisseur_ref_pour_origine):
     texte = p["_texte"]
     origine = R.origine_info(texte, p["categorie"], p["sous_categorie"],
                              fournisseur_ref_pour_origine)
+    origine["origine_departement"] = normaliser_departement(origine["origine_departement"])
     p.update(origine)
 
     alcool, degre = R.alcool_info(texte, p["categorie"], p["degre_alcool"])
@@ -202,7 +226,9 @@ def finaliser(p, fournisseur_ref_pour_origine):
         poids, volume, mention = R.poids_volume(texte)
         p["poids_net_g"], p["volume_ml"], p["mention_poids_volume_source"] = poids, volume, mention
 
+    p["alerte_matiere_premiere"] = R.alerte_matiere_premiere(texte, p["categorie"])
     p.update(R.logistique(texte, p["categorie"], p["volume_ml"]))
+    PRICING.enrichir(p)
 
     niveau, justif = R.noblesse(p["prix_achat_ht"], p["categorie"], p["appellation"], texte)
     p["niveau_noblesse_propose"] = niveau
@@ -296,7 +322,7 @@ for row in read_csv("01_normand_direct_tarif_2026.csv"):
             "detail": f"« {produit_lib} » : ligne de commentaire du tarif, sans prix unitaire "
                       f"(valeur colonne PU HT : « {row['pu_ht']} »). Conservée, non comptée comme produit.",
         })
-    produits.append(finaliser(p, None))
+    produits.append(finaliser(p, ref_producteur(nom_prod)))
 
 # --- 2.2 Catalogue Caramels d'Isigny --------------------------------------
 MINI = re.compile(r"(?i)(vrac \d+ ?kg minimum|boite de [^/]+|bo(î|i)te de \d+ unit(é|e)s[^/]*)")
@@ -355,7 +381,7 @@ for row in read_csv("02_caramels_isigny_2026.csv"):
         p["reference_fournisseur"] = f"{row['reference']} (EAN {row['ean']})"
     poids, volume, mention = R.poids_volume(row["poids"])
     p["poids_net_g"], p["volume_ml"], p["mention_poids_volume_source"] = poids, volume, row["poids"]
-    produits.append(finaliser(p, None))
+    produits.append(finaliser(p, ref_producteur("CARAMELS D'ISIGNY")))
 
 # --- 2.3 Tarif Domaine de Billy -------------------------------------------
 for row in read_csv("03_domaine_de_billy_tarif_2026.csv"):
@@ -396,7 +422,7 @@ for row in read_csv("03_domaine_de_billy_tarif_2026.csv"):
                                 "dans le document ; prix hors droits et montant des droits absents")
     poids, volume, mention = R.poids_volume(row["volume"])
     p["poids_net_g"], p["volume_ml"], p["mention_poids_volume_source"] = poids, volume, row["volume"]
-    produits.append(finaliser(p, referentiel["SARL DOMAINE DE BILLY"]))
+    produits.append(finaliser(p, ref_producteur("SARL DOMAINE DE BILLY")))
 
 # --- 2.4 Facture Domaine de Brucan ----------------------------------------
 for row in read_csv("04_facture_brucan_2600000025.csv"):
@@ -440,7 +466,7 @@ for row in read_csv("04_facture_brucan_2600000025.csv"):
                         "cépage et appellation À CONFIRMER (code APE du domaine : 0121Z, culture de la vigne)")
     p["volume_ml"] = 750.0
     p["mention_poids_volume_source"] = "75 cl (désignation de la facture)"
-    produits.append(finaliser(p, referentiel["DOMAINE DE BRUCAN"]))
+    produits.append(finaliser(p, ref_producteur("DOMAINE DE BRUCAN")))
 
 print(f"{len(produits)} lignes produits construites")
 
@@ -902,6 +928,14 @@ parametres_rows = [{"parametre": k, "valeur": v, "unite": u, "description": d,
 vrais_produits = [p for p in produits if p["statut_ligne"] == "PRODUIT"]
 
 
+def _mediane(valeurs):
+    if not valeurs:
+        return 0.0
+    tri = sorted(valeurs)
+    milieu = len(tri) // 2
+    return tri[milieu] if len(tri) % 2 else (tri[milieu - 1] + tri[milieu]) / 2
+
+
 def compte(pred):
     return sum(1 for p in vrais_produits if pred(p))
 
@@ -931,6 +965,12 @@ controle = [
     ("dont Calvados (14)", compte(lambda p: "Calvados" in str(p["origine_departement"])), ""),
     ("dont Manche (50)", compte(lambda p: "Manche" in str(p["origine_departement"])), ""),
     ("dont Orne (61)", compte(lambda p: "Orne" in str(p["origine_departement"])), ""),
+    ("dont Eure (27)", compte(lambda p: "Eure" in str(p["origine_departement"])), ""),
+    ("dont Seine-Maritime (76)",
+     compte(lambda p: "Seine-Maritime" in str(p["origine_departement"])), ""),
+    ("Produits transformés en Normandie à partir d'une matière première non française",
+     compte(lambda p: bool(p["alerte_matiere_premiere"])),
+     "Café, thé, cacao, fruits exotiques : à ne pas présenter comme « 100 % local »"),
     ("dont département normand à confirmer",
      compte(lambda p: p["caractere_local"] == "NORMANDIE_CONFIRMEE" and p["origine_departement"] == A), ""),
     ("Produits portant un indice de normandité dans leur seul nom",
@@ -966,8 +1006,13 @@ controle = [
     ("Produits sans poids ni volume", compte(lambda p: not p["poids_net_g"] and not p["volume_ml"]), ""),
     ("Produits avec dimensions renseignées", 0,
      "Aucun document ne contient de dimensions : longueur/largeur/hauteur à mesurer ou à demander"),
-    ("Produits avec prix de vente renseigné", 0,
-     "Aucun prix de vente n'existe : marge, taux de marge et scores de marge non calculables"),
+    ("Produits avec prix de vente proposé", compte(lambda p: p["prix_vente_ht"] != ""),
+     "PROPOSITION : coefficients de marché (build/coefficients_prix.csv), non issus des documents"),
+    ("Taux de marge médian sur le prix de vente proposé",
+     f"{_mediane([float(p['taux_marge']) for p in vrais_produits if p['taux_marge']]) * 100:.1f} %",
+     "À valider avant toute mise en vente"),
+    ("Produits sans prix de vente", compte(lambda p: p["prix_vente_ht"] == ""),
+     "Produits dont le prix d'achat est nul ou absent"),
     ("Emballages référencés", 0, "Base EMBALLAGES à alimenter (aucun tarif emballage fourni)"),
     ("Tarifs de transport référencés", 0, "Base TARIFS_TRANSPORT à alimenter"),
     ("Alternatives produits calculées", len(alternatives),

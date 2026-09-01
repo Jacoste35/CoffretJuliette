@@ -1,16 +1,30 @@
 # Coffret Juliette
 
-Base de données produits et fournisseurs pour la composition de coffrets et
-paniers garnis.
+Site de composition de coffrets et paniers garnis, adossé à une base produits /
+fournisseurs reconstituée à partir des documents commerciaux des producteurs.
 
-## Contenu
+## Structure
 
-- `data/base-produits-noel/` — base produits / fournisseurs 2026 reconstituée à
-  partir des documents commerciaux (tarifs, catalogues, facture).
-  - `export/` — livrable : `BASE_PRODUITS_FOURNISSEURS_2026.xlsx` (24 onglets)
-    et les mêmes tables en CSV, prêtes pour un import en base de données.
-  - `raw/` — extractions brutes des documents sources.
-  - `build/` — scripts d'extraction et de normalisation, référentiels de règles.
+| Dossier | Contenu |
+|---|---|
+| `coffrets-noel/` | Application Next.js 14 (App Router) : catalogue, questionnaire, moteur de composition, propositions chiffrées, devis imprimable, back-office lecture |
+| `data/base-produits-noel/` | Base produits / fournisseurs 2026 : livrable XLSX 24 onglets + tables CSV (`export/`), extractions brutes des documents sources (`raw/`), scripts d'extraction et de normalisation (`build/`) |
+| `docs/` | Conception de la plateforme, schéma de base de données, piste d'architecture WordPress / WooCommerce |
 
-Voir `data/base-produits-noel/README.md` pour le détail des tables, des règles
-appliquées et des sources.
+## Démarrage
+
+```bash
+cd coffrets-noel
+npm install
+npm run catalogue   # régénère data/catalogue.json depuis ../data/base-produits-noel
+npm run dev         # http://localhost:3100
+```
+
+## Déploiement
+
+Sur Vercel, régler le **Root Directory sur `coffrets-noel`**. Le catalogue est un
+JSON versionné : aucune base de données ni variable d'environnement requise.
+Optionnel : `NEXT_PUBLIC_SITE_URL` pour le sitemap et les métadonnées Open Graph.
+
+Détail du fonctionnement dans `coffrets-noel/README.md`, détail des tables et des
+règles de reconstitution dans `data/base-produits-noel/README.md`.
