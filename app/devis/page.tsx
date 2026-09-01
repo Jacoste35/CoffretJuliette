@@ -15,11 +15,10 @@ import type { Gamme } from "@/lib/types";
 
 export const metadata: Metadata = { title: "Votre devis", robots: { index: false } };
 
-export default function PageDevis({
-  searchParams,
-}: {
-  searchParams: Record<string, string | string[] | undefined>;
+export default async function PageDevis(props: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
+  const searchParams = await props.searchParams;
   const besoin = lireBesoin(searchParams);
   const gamme = ((searchParams.g as Gamme) ?? "SIGNATURE") as Gamme;
   const proposition = propositionChoisie(besoin, gamme, lireRemplacements(searchParams));

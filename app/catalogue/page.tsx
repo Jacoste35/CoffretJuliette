@@ -12,7 +12,8 @@ export const metadata: Metadata = {
 
 type Params = Record<string, string | string[] | undefined>;
 
-export default function Catalogue({ searchParams }: { searchParams: Params }) {
+export default async function Catalogue(props: { searchParams: Promise<Params> }) {
+  const searchParams = await props.searchParams;
   const filtres = lireFiltres(searchParams);
   const { produits, total, page, pages } = filtrer(filtres);
   const { categories, departements, producteurs } = facettes();

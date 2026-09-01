@@ -1,47 +1,75 @@
 @import "tailwindcss";
 
 /*
- * Tailwind 4 : @theme se déclare au niveau racine, jamais dans une media
- * query — sinon les valeurs y sont hoistées et s'appliquent tout le temps.
- * La palette claire est donc définie ici, et seules les variables sont
- * redéfinies plus bas pour le thème sombre.
+ * Direction artistique du brief : bordeaux profond, crème, vert sapin,
+ * or vieilli, brun chocolat. Tailwind 4 : les couleurs vivent dans @theme
+ * (au niveau racine, jamais dans une media query).
  */
 @theme {
-  --color-ground: #f3f6f4;
-  --color-surface: #ffffff;
-  --color-ink: #141e1b;
-  --color-ink-2: #4c5c56;
-  --color-ink-3: #71827b;
-  --color-rule: #d8e0db;
-  --color-accent: #1f5c46;
-  --color-accent-soft: #e2efe7;
+  --color-bordeaux: #6b1f2e;
+  --color-bordeaux-dark: #4a1420;
+  --color-bordeaux-light: #8e3145;
+  --color-creme: #f7f1e6;
+  --color-creme-dark: #efe5d3;
+  --color-creme-light: #fcf8f1;
+  --color-sapin: #1f3d2b;
+  --color-sapin-light: #2f5a3f;
+  --color-or: #b08d4f;
+  --color-or-light: #cfae74;
+  --color-or-dark: #8a6c38;
+  --color-chocolat: #3d2a1e;
+  --color-chocolat-light: #5c4232;
 
-  --font-display: var(--font-bricolage), "Helvetica Neue", Arial, sans-serif;
-  --font-body: var(--font-source-serif), Georgia, "Times New Roman", serif;
+  --font-serif: var(--font-serif-var), Georgia, Cambria, serif;
+  --font-sans: var(--font-sans-var), system-ui, sans-serif;
+
+  --shadow-carte: 0 1px 2px rgba(61, 42, 30, 0.06), 0 8px 24px -12px rgba(61, 42, 30, 0.18);
+  --shadow-releve: 0 2px 4px rgba(61, 42, 30, 0.08), 0 18px 40px -16px rgba(61, 42, 30, 0.28);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-ground: #0f1513;
-    --color-surface: #161f1b;
-    --color-ink: #e7eee9;
-    --color-ink-2: #a0afa8;
-    --color-ink-3: #7e8d86;
-    --color-rule: #293530;
-    --color-accent: #74c29a;
-    --color-accent-soft: #1a2a22;
-  }
-}
-
-html {
-  color-scheme: light dark;
+/* Le site assume un seul monde visuel, clair, sur tous les thèmes. */
+:root {
+  color-scheme: light;
 }
 
 body {
-  background: var(--color-ground);
-  color: var(--color-ink);
-  font-family: var(--font-body);
-  -webkit-font-smoothing: antialiased;
+  @apply bg-creme text-chocolat antialiased;
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3 {
+  @apply font-serif;
+}
+
+/* Équivalent de la config container de Tailwind 3 : centré, 1180 px. */
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.lien-sobre {
+  @apply underline decoration-or/60 underline-offset-4 hover:decoration-or;
+}
+
+.carte {
+  @apply rounded-lg border border-or/25 bg-creme-light shadow-carte;
+}
+
+.etiquette {
+  @apply inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-medium;
+}
+
+@media print {
+  .sans-impression {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

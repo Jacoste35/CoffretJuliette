@@ -7,11 +7,10 @@ import { EtiquetteAlcool } from "@/components/produit-carte";
 
 export const metadata: Metadata = { title: "Vos trois propositions" };
 
-export default function Propositions({
-  searchParams,
-}: {
-  searchParams: Record<string, string | string[] | undefined>;
+export default async function Propositions(props: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
+  const searchParams = await props.searchParams;
   const besoin = lireBesoin(searchParams);
   const propositions = construirePropositions(besoin);
   const params = ecrireBesoin(besoin).toString();

@@ -65,7 +65,7 @@ export default function Formulaire({ pro }: { pro: boolean }) {
             ["REMERCIEMENT", "Remerciement"],
             ["EVENEMENT", "Événement"],
             ["AUTRE", "Autre"],
-          ].map(([code, libelle]) => (
+          ].map(([code = "", libelle]) => (
             <Puce key={code} actif={occasion === code} onClick={() => setOccasion(code)}>
               {libelle}
             </Puce>

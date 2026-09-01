@@ -23,7 +23,7 @@ export interface ParametreEmballage {
   nbProduitsMax: number;
 }
 
-export const EMBALLAGES: Record<string, ParametreEmballage> = {
+export const EMBALLAGES: Record<"ESSENTIEL" | "SIGNATURE" | "PRESTIGE", ParametreEmballage> = {
   ESSENTIEL: {
     libelle: "Coffret carton kraft",
     description: "Boîte carton, frisure naturelle, étiquette",
@@ -55,7 +55,7 @@ export const POIDS_PROTECTION_G = 60;
 
 export const PREPARATION = {
   tauxHoraireHt: 25,
-  minutesParGamme: { ESSENTIEL: 3, SIGNATURE: 6, PRESTIGE: 10 } as Record<string, number>,
+  minutesParGamme: { ESSENTIEL: 3, SIGNATURE: 6, PRESTIGE: 10 } as Record<"ESSENTIEL" | "SIGNATURE" | "PRESTIGE", number>,
   minutesPersonnalisation: 2,
 };
 

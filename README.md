@@ -14,14 +14,18 @@ permanent.
 | | |
 |---|---|
 | Étape 1 — cadrage et architecture | **validé**, voir `docs/ARCHITECTURE.md` |
-| Lot 1 — socle | **en cours** : squelette, schéma, import, authentification |
-| Lot 2 — moteur de composition | à venir |
-| Lot 0 — données (prix de vente, photos, contenants) | **bloquant, côté client** |
+| Site v1 (parcours complet, moteur, devis) | **fonctionnel** — issu du prototype, porté sur Next 16 |
+| Lot 1 — socle (schéma, import, authentification) | **posé** |
+| Lot 0 — données (validation des prix, photos, contenants) | **côté client** |
 
-Le catalogue ne contient aujourd'hui **aucun prix de vente** : l'import le
-signale et n'active aucun produit pour le moteur. C'est attendu, et c'est le
-chemin critique du projet. Le classeur de saisie est dans
-`data/base-produits-noel/saisie/SAISIE_PRIX_DE_VENTE.xlsx`.
+Le parcours complet fonctionne : questionnaire → trois propositions → échange
+de produits → récapitulatif → devis imprimable. Le moteur ne propose **jamais**
+un coffret au-dessus du budget annoncé.
+
+Les 701 prix de vente sont des **propositions par coefficients, à valider** :
+le classeur `data/base-produits-noel/saisie/SAISIE_PRIX_DE_VENTE.xlsx` les
+prérenseigne avec un statut PROPOSÉ / VALIDÉ / À REVOIR. Tant qu'ils ne sont
+pas validés, le site l'affiche : les montants ne constituent pas une offre.
 
 ## Pile technique
 
@@ -60,14 +64,16 @@ configurés, ce qui évite d'aller lire les variables dans l'interface de Vercel
 ## Organisation
 
 ```
-app/            routes Next.js (site, configurateur, compte, admin, api)
-src/domain/     logique métier pure — aucune dépendance, 100 % testable
-src/db/         schéma Drizzle, migrations, client
+app/            routes Next.js : accueil, questionnaire, propositions,
+                coffret, récapitulatif, devis, catalogue, producteurs, admin
+src/lib/        moteur v1 (issu du prototype), catalogue JSON, env
+src/domain/     logique métier pure (TVA en centimes) — cible du moteur v2
+src/db/         schéma Drizzle (24 tables), migrations, client
 src/auth/       Supabase Auth, côté serveur et navigateur
-src/lib/        validation d'environnement, utilitaires
-scripts/        import du catalogue
-tests/unit/     moteur de composition et calcul de TVA
-data/           base produits / fournisseurs 2026 (source d'import)
+src/data/       catalogue.json généré par scripts/build-catalogue.py
+scripts/        import du catalogue en base, génération du catalogue JSON
+tests/unit/     calcul de TVA et centimes
+data/           base produits / fournisseurs 2026 (source de vérité)
 docs/           cadrage et architecture
 ```
 

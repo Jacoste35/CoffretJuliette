@@ -3,11 +3,10 @@ import Formulaire from "./formulaire";
 
 export const metadata: Metadata = { title: "Votre besoin" };
 
-export default function Questionnaire({
-  searchParams,
-}: {
-  searchParams: Record<string, string | string[] | undefined>;
+export default async function Questionnaire(props: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
+  const searchParams = await props.searchParams;
   const pro = searchParams.t === "pro";
   return (
     <div className="container max-w-3xl py-12">

@@ -81,7 +81,8 @@ export function appliquerRemplacements(
   besoin: Besoin,
 ): Proposition {
   const produits = proposition.produits.map((p) => {
-    const remplacant = remplacements[p.id] ? getProduit(remplacements[p.id]) : undefined;
+    const idRemplacant = remplacements[p.id];
+    const remplacant = idRemplacant ? getProduit(idRemplacant) : undefined;
     return remplacant ?? p;
   });
   const chiffrage = chiffrer(produits, proposition.gamme, besoin.budget);
@@ -100,6 +101,9 @@ export function propositionChoisie(
   remplacements: Record<string, string>,
 ): Proposition {
   const propositions = construirePropositions(besoin);
-  const base = propositions.find((p) => p.gamme === gamme) ?? propositions[1];
+  const base = propositions.find((p) => p.gamme === gamme) ?? propositions[1] ?? propositions[0];
+  if (!base) {
+    throw new Error("Aucune proposition constructible pour ce besoin.");
+  }
   return appliquerRemplacements(base, remplacements, besoin);
 }

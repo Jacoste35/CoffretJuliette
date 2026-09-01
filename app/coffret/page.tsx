@@ -16,11 +16,10 @@ import type { Gamme } from "@/lib/types";
 
 export const metadata: Metadata = { title: "Votre coffret" };
 
-export default function Coffret({
-  searchParams,
-}: {
-  searchParams: Record<string, string | string[] | undefined>;
+export default async function Coffret(props: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
+  const searchParams = await props.searchParams;
   const besoin = lireBesoin(searchParams);
   const gamme = ((searchParams.g as Gamme) ?? "SIGNATURE") as Gamme;
   const remplacements = lireRemplacements(searchParams);

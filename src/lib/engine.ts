@@ -70,7 +70,10 @@ export const SQUELETTES: Squelette[] = [
     accroche: "Une pièce maîtresse et des produits d'exception",
     nbProduits: 5,
     familles: [BOISSON, SUCRE, SALE, [...SUCRE, ...SALE], [...BOISSON, ...SUCRE, ...SALE]],
-    cibleBudget: 1.22,
+    // Règle métier absolue : aucune proposition au-dessus du budget annoncé.
+    // Le Prestige montre ce que « l'exception » donne DANS le budget ; la
+    // montée en gamme passe par budgetConseille, jamais par un dépassement.
+    cibleBudget: 0.97,
     noblesseMin: 2,
     pieceMaitresse: 4,
   },
@@ -153,11 +156,11 @@ export function emballagePour(gamme: Gamme, budget: number) {
   const depart = ORDRE_EMBALLAGES.indexOf(gamme);
   for (let i = depart; i < ORDRE_EMBALLAGES.length; i += 1) {
     const cle = ORDRE_EMBALLAGES[i];
-    if (EMBALLAGES[cle].prixVenteHt <= cible * PART_MAX_EMBALLAGE) {
+    if (cle !== undefined && EMBALLAGES[cle].prixVenteHt <= cible * PART_MAX_EMBALLAGE) {
       return { cle, parametre: EMBALLAGES[cle] };
     }
   }
-  const cle = ORDRE_EMBALLAGES[ORDRE_EMBALLAGES.length - 1];
+  const cle = ORDRE_EMBALLAGES[ORDRE_EMBALLAGES.length - 1] ?? "SIGNATURE";
   return { cle, parametre: EMBALLAGES[cle] };
 }
 
@@ -384,7 +387,7 @@ export function construirePropositions(besoin: Besoin): Proposition[] {
 
   const dejaProposes = new Set<string>();
 
-  return SQUELETTES.map((squelette) => {
+  const propositions = SQUELETTES.map((squelette) => {
     const produits = composer(squelette, besoin, pool, dejaProposes);
     produits.forEach((p) => dejaProposes.add(p.id));
     const chiffrage = chiffrer(produits, squelette.gamme, besoin.budget);
@@ -410,6 +413,9 @@ export function construirePropositions(besoin: Besoin): Proposition[] {
           : null,
     };
   });
+
+  // Invariant : le moteur ne présente JAMAIS un coffret au-dessus du budget.
+  return propositions.filter((p) => p.ecartBudget <= 0 && p.produits.length > 0);
 }
 
 /** Budget minimal permettant d'atteindre le nombre de produits visé. */
@@ -435,10 +441,10 @@ function argumenter(produits: Produit[], squelette: Squelette, budget: number): 
   const producteurs = new Set(produits.map((p) => p.producteur)).size;
   points.push(`${producteurs} producteurs normands`);
 
-  const maitresse = produits.reduce(
-    (a, b) => (b.noblesse > a.noblesse ? b : a),
-    produits[0],
-  );
+  const premier = produits[0];
+  const maitresse = premier
+    ? produits.reduce((a, b) => (b.noblesse > a.noblesse ? b : a), premier)
+    : undefined;
   if (maitresse && squelette.pieceMaitresse) points.push(`Pièce maîtresse : ${maitresse.nom}`);
 
   const sansAlcool = produits.every((p) => p.alcool === "NON");
@@ -467,7 +473,8 @@ export function alternativesPour(
  * ---------------------------------------------------------------------- */
 export function calculerTransport(poidsTotalG: number, nbColis: number) {
   const parColis = poidsTotalG / Math.max(nbColis, 1) / 1000;
-  const palier = TRANSPORT.find((t) => parColis <= t.poidsMaxKg) ?? TRANSPORT[TRANSPORT.length - 1];
+  const palier = TRANSPORT.find((t) => parColis <= t.poidsMaxKg) ?? TRANSPORT.at(-1);
+  if (!palier) return 0;
   return arrondi(palier.tarifHt * nbColis);
 }
 

@@ -1,60 +1,97 @@
-const ETAPES = [
-  { titre: 'Votre budget', texte: 'Un montant par coffret, un nombre de coffrets.' },
-  { titre: 'Vos préférences', texte: 'Avec ou sans alcool, normand, français, bio, premium.' },
-  { titre: 'Nos propositions', texte: 'Plusieurs compositions qui utilisent votre budget au plus près.' },
-  { titre: 'Votre devis', texte: 'Généré et envoyé automatiquement, acceptable en ligne.' },
-];
+import Link from "next/link";
+import { getProduits, getProducteurs } from "@/lib/catalogue";
 
 export default function Accueil() {
+  const produits = getProduits();
+  const producteurs = getProducteurs();
+  const sansAlcool = produits.filter((p) => p.alcool === "NON").length;
+
   return (
-    <main className="mx-auto flex min-h-dvh max-w-5xl flex-col justify-between px-6 py-12 sm:px-10 sm:py-16">
-      <header>
-        <p className="font-[family-name:var(--font-display)] text-xs font-bold tracking-[0.18em] text-ink-3 uppercase">
-          Normandie
-        </p>
-      </header>
+    <>
+      <section className="border-b border-or/20 bg-gradient-to-b from-creme-light to-creme">
+        <div className="container py-16 md:py-24">
+          <p className="text-xs uppercase tracking-[0.28em] text-or-dark">
+            Normandie · Calvados · Manche · Orne · Eure · Seine-Maritime
+          </p>
+          <h1 className="mt-4 max-w-3xl text-4xl leading-tight text-bordeaux md:text-5xl">
+            Pour qui préparez-vous vos cadeaux&nbsp;?
+          </h1>
+          <p className="mt-4 max-w-2xl text-lg text-chocolat-light">
+            Répondez à quatre questions. Nous composons trois coffrets à partir de{" "}
+            {produits.length} produits de {producteurs.length} producteurs normands, et
+            vous obtenez votre prix immédiatement.
+          </p>
 
-      <section className="py-16">
-        <h1 className="font-[family-name:var(--font-display)] text-[clamp(2.4rem,7vw,4.5rem)] leading-[1.02] font-extrabold tracking-[-0.03em] text-balance">
-          Comptoir
-          <br />
-          des Chatonniers
-        </h1>
-
-        <p className="mt-8 max-w-[52ch] text-lg leading-relaxed text-ink-2 sm:text-xl">
-          Coffrets cadeaux gourmands composés à partir de producteurs normands et
-          français. Vous donnez un budget, nous composons le coffret.
-        </p>
-
-        <p className="mt-10 inline-flex items-center gap-3 rounded-sm border border-rule bg-surface px-4 py-2.5 font-[family-name:var(--font-display)] text-sm font-medium">
-          <span
-            aria-hidden="true"
-            className="inline-block size-2 rounded-full bg-accent"
-          />
-          Site en cours de construction
-        </p>
-
-        <ol className="mt-14 grid gap-px overflow-hidden rounded-sm border border-rule bg-rule sm:grid-cols-2 lg:grid-cols-4">
-          {ETAPES.map((etape, i) => (
-            <li key={etape.titre} className="bg-surface p-5">
-              <span className="font-[family-name:var(--font-display)] text-xs font-bold tracking-[0.1em] text-accent tabular-nums">
-                {String(i + 1).padStart(2, '0')}
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:max-w-3xl">
+            <Link
+              href="/questionnaire?t=part"
+              className="group carte flex flex-col justify-between p-7 transition hover:-translate-y-0.5 hover:shadow-releve"
+            >
+              <div>
+                <h2 className="text-2xl text-bordeaux">Je suis un particulier</h2>
+                <p className="mt-2 text-sm text-chocolat-light">
+                  Un cadeau, quelques coffrets, pour offrir à vos proches.
+                </p>
+              </div>
+              <span className="mt-6 text-sm font-medium text-or-dark group-hover:underline">
+                Composer mon coffret →
               </span>
-              <h2 className="mt-3 font-[family-name:var(--font-display)] text-base font-bold tracking-[-0.01em]">
-                {etape.titre}
-              </h2>
-              <p className="mt-1.5 text-sm leading-relaxed text-ink-2">{etape.texte}</p>
-            </li>
-          ))}
-        </ol>
+            </Link>
+
+            <Link
+              href="/questionnaire?t=pro"
+              className="group flex flex-col justify-between rounded-lg border border-bordeaux/30 bg-bordeaux p-7 text-creme shadow-carte transition hover:-translate-y-0.5 hover:shadow-releve"
+            >
+              <div>
+                <h2 className="text-2xl">Je suis une entreprise</h2>
+                <p className="mt-2 text-sm text-creme/80">
+                  Cadeaux clients ou salariés, devis immédiat, livraison groupée
+                  ou multi-adresses.
+                </p>
+              </div>
+              <span className="mt-6 text-sm font-medium text-or-light group-hover:underline">
+                Obtenir mon devis →
+              </span>
+            </Link>
+          </div>
+
+          <p className="mt-6 text-sm text-chocolat-light">
+            Vous préférez regarder d&apos;abord&nbsp;?{" "}
+            <Link href="/catalogue" className="lien-sobre text-bordeaux">
+              Parcourir les {produits.length} produits du catalogue
+            </Link>
+          </p>
+        </div>
       </section>
 
-      <footer className="border-t border-rule pt-6 font-[family-name:var(--font-display)] text-sm text-ink-3">
-        <p>
-          Entreprises et particuliers — cadeaux clients, CSE, séminaires, fêtes de fin
-          d&apos;année.
-        </p>
-      </footer>
-    </main>
+      <section className="container grid gap-8 py-14 md:grid-cols-3">
+        {[
+          {
+            titre: "Producteur identifié",
+            texte:
+              "Pour chaque produit : le producteur, sa commune, son département. La provenance est affichée telle qu'elle est documentée, jamais devinée.",
+            chiffre: `${producteurs.length} producteurs`,
+          },
+          {
+            titre: "Sans alcool possible",
+            texte:
+              "Un filtre strict : les coffrets sans alcool excluent aussi les produits dont l'alcool n'est qu'un ingrédient.",
+            chiffre: `${sansAlcool} produits sans alcool`,
+          },
+          {
+            titre: "Trois propositions, pas cinquante",
+            texte:
+              "Essentiel, Signature, Prestige. Vous comparez trois coffrets construits pour votre budget, et vous ajustez ce que vous voulez.",
+            chiffre: "1 minute",
+          },
+        ].map((bloc) => (
+          <div key={bloc.titre} className="carte p-6">
+            <p className="text-xs uppercase tracking-[0.2em] text-or-dark">{bloc.chiffre}</p>
+            <h3 className="mt-3 text-xl text-bordeaux">{bloc.titre}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-chocolat-light">{bloc.texte}</p>
+          </div>
+        ))}
+      </section>
+    </>
   );
 }
