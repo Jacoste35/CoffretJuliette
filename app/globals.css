@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/*
+ * Tailwind 4 : @theme se déclare au niveau racine, jamais dans une media
+ * query — sinon les valeurs y sont hoistées et s'appliquent tout le temps.
+ * La palette claire est donc définie ici, et seules les variables sont
+ * redéfinies plus bas pour le thème sombre.
+ */
 @theme {
   --color-ground: #f3f6f4;
   --color-surface: #ffffff;
@@ -15,7 +21,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  @theme {
+  :root {
     --color-ground: #0f1513;
     --color-surface: #161f1b;
     --color-ink: #e7eee9;
