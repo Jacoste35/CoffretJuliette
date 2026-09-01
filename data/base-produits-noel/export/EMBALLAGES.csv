@@ -1,0 +1,2 @@
+﻿id_emballage,reference,id_fournisseur_emballage,nom,type,longueur_cm,largeur_cm,hauteur_cm,volume_utile_dm3,poids_g,prix_achat_ht,quantite_par_conditionnement,prix_unitaire_ht,delai,stock,minimum_commande,compatible_avec,source
+,,,,,,,,,,,,,,,,,

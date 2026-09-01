@@ -1,0 +1,35 @@
+ordre,champ_cible,motif_regex,valeur,sous_valeur,commentaire
+05,categorie,"(?i)vinaigre|aigrette de claids",EPICERIE_SALEE,VINAIGRE,"Prioritaire sur « cidre » / « miel » : un vinaigre n'est ni une boisson alcoolisée ni un miel"
+06,categorie,"(?i)liqueur|limoncello|pastis|cr(è|e)me de calvados",BOISSON_ALCOOLISEE,LIQUEUR,Prioritaire sur « café » (liqueur de café Cold brew)
+07,categorie,"(?i)hydromel",BOISSON_ALCOOLISEE,HYDROMEL,Prioritaire sur « miel »
+08,categorie,"(?i)cidre de glace",BOISSON_ALCOOLISEE,CIDRE_DE_GLACE,"Degrés indiqués dans les documents : 8,9 % (Billy) et 12 % (Hauts Vents)"
+09,categorie,"(?i)moscow mule|martini|cosmopolitan|sex on the beach|plum sour",BOISSON_ALCOOLISEE,COCKTAIL_PRET_A_BOIRE,Gamme SKINFAXI - degrés indiqués dans les libellés
+10,categorie,"(?i)savon|lait d(é|e)maquillant|bain douche|shampoing|cr(è|e)me hydratante|cr(è|e)me antiride|lait corporel|cr(è|e)me pieds|cr(è|e)me main",COSMETIQUE_BIEN_ETRE,SOIN,
+11,categorie,"(?i)^\s*(nouveau\s*)?(pack|coffret)\b|demi m(è|e)tre",COFFRET_ET_EMBALLAGE,COFFRET_OU_PACK,"Ancré en début de libellé pour ne pas capter « en coffret de 6 » (conditionnement). AMBIGU : coffret garni ou emballage seul, à confirmer article par article"
+12,categorie,"(?i)verre (à|a) bi(è|e)re|^pinte|pr(é|e)sentoir|pot (à|a) lait|2 ?cv|citro(ë|e)n|bo(î|i)te (à|a) musique|carrousel|bo(î|i)te cigare",ART_DE_LA_TABLE_ET_OBJET,OBJET_ET_CONTENANT,
+13,categorie,"(?i)caramel (à|a) tartiner|coulis de caramel|caramel blond",EPICERIE_SUCREE,CARAMEL_A_TARTINER,
+15,categorie,"(?i)(é|e)clats de caramel|poudre de caramel|caramel cors(é|e)|(à|a) enrober|cellophane neutre|caramel au beurre sal(é|e) [13]kg",INGREDIENT_PROFESSIONNEL,PAI,Produits alimentaires intermédiaires du catalogue Isigny (pages 19-20)
+14,categorie,"(?i)cookie|biscuit|sabl(é|e)|palet|paille|croquant|croquenoisette|croquentin|croquet|financier|tuile|sablette|grignotine|batonnet feuillet|coquille|boutons? de la manche|ap(é|e)ro tomate|pain d'(é|e)pices",BISCUITERIE,BISCUIT,
+16,categorie,"(?i)teurgoule|riz au lait|cr(è|e)me aux (œ|oe)ufs",TRAITEUR_SUCRE,DESSERT,Prioritaire sur « caramel » (éclats de caramel d'Isigny en garniture)
+17,categorie,"(?i)confiture de lait",EPICERIE_SUCREE,CONFITURE_DE_LAIT,
+18,categorie,"(?i)confiture|confit de cidre|confit de poir(é|e)|p(â|a)te de pommes",EPICERIE_SUCREE,CONFITURE_ET_CONFIT,"Prioritaire sur « cidre » et « caramel » (confiture pomme au cidre, confiture pomme caramel)"
+19,categorie,"(?i)moutarde|chutney|confit d'oignon|balsamique",EPICERIE_SALEE,CONDIMENT,Prioritaire sur « calvados » / « pommeau » qui ne sont ici que des ingrédients
+20,categorie,"(?i)beurre de cacahu(è|e)tes|beurre 100% cacahuetes",EPICERIE_SUCREE,PATE_A_TARTINER,
+21,categorie,"(?i)bonbons|berlingot|nougat|billes chocolat|sucettes|pop corn",CONFISERIE,BONBON_ET_CONFISERIE,Prioritaire sur « miel » (bonbons au miel)
+22,categorie,"(?i)soupe|bisque|velout(é|e)|choucroute de la mer|rouille",TRAITEUR_MER,SOUPE_ET_BISQUE,
+23,categorie,"(?i)saumon|truite|maquereau|hareng|sardine|haddock|\blieu\b|lotte|st jacques|saint jacques|langoustine|homard|crevette|thon|cabillaud|rouget|(é|e)trille|poisson|algues",TRAITEUR_MER,PRODUIT_DE_LA_MER,Prioritaire sur « miel » (rillettes noix de St Jacques pomme miel)
+24,categorie,"(?i)foie gras",TRAITEUR_CHARCUTERIE,FOIE_GRAS,
+25,categorie,"(?i)terrine|rillette|p(â|a)t(é|e) de foie|boudin|andouille|saucisson|chorisson|saucisse|coppa|lonzu|guanciale|b(œ|oe)uf normand|ris de veau|camembert|brie de meaux|livarot|pont l'(é|e)v(ê|e)que|ch(è|e)vre confit|bleu tomates|neufch(â|a)tel|gorge de porc",TRAITEUR_CHARCUTERIE,CHARCUTERIE_ET_TERRINE,Prioritaire sur « cidre » / « calvados » (terrine de campagne au cidre)
+26,categorie,"(?i)saut(é|e) de porc|b(œ|oe)uf au cidre|blanquette|veau aux|tripes|poulet val|chili con carne|paupiette",TRAITEUR_PLATS,PLAT_CUISINE,Prioritaire sur « cidre » (bœuf au cidre)
+27,categorie,"(?i)\bmiel\b",EPICERIE_SUCREE,MIEL,Placé après les règles mer/charcuterie/confiserie qui citent le miel comme ingrédient
+28,categorie,"(?i)caramel",CONFISERIE,CARAMEL,Règle générique de repli pour la confiserie caramel
+29,categorie,"(?i)\bth(é|e)\b|tisane|rooibos|\bmat(é|e)\b|detox|maternit(é|e)",BOISSON_SANS_ALCOOL,THE_ET_INFUSION,
+30,categorie,"(?i)caf(é|e)",BOISSON_SANS_ALCOOL,CAFE,
+31,categorie,"(?i)\bjus\b|^bib |pomme amour|pomme p(é|e)tillant",BOISSON_SANS_ALCOOL,JUS_DE_FRUIT,
+32,categorie,"(?i)bi(è|e)re",BOISSON_ALCOOLISEE,BIERE,
+33,categorie,"(?i)\bcidre\b|amour d'h(é|e)rout|terroir chic|f(û|u)t cors(é|e)|f(û|u)t fraicheur|cuv(é|e)e gourmande|micro cuv(é|e)e|grande cuv(é|e)e",BOISSON_ALCOOLISEE,CIDRE,
+34,categorie,"(?i)\bpoir(é|e)\b",BOISSON_ALCOOLISEE,POIRE,
+35,categorie,"(?i)pommeau|ap(é|e)ro claids",BOISSON_ALCOOLISEE,POMMEAU,
+36,categorie,"(?i)calvados|blanche d'alambic|fine de claids|keys' claids|esprit de billy|singuliers|cask finish",BOISSON_ALCOOLISEE,SPIRITUEUX_POMME,
+37,categorie,"(?i)\bgin\b|vodka|\brhum\b",BOISSON_ALCOOLISEE,SPIRITUEUX,
+38,categorie,"(?i)connivence|pinot|auxerrois|blanc marin|ros(é|e) marin|trois fl(è|e)ches|les hougues",BOISSON_ALCOOLISEE,VIN,

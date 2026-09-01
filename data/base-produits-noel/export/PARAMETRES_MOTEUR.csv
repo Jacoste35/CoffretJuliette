@@ -1,0 +1,16 @@
+﻿parametre,valeur,unite,description,modifiable_en_back_office
+COUT_PREPARATION_COFFRET_SIMPLE,À DÉFINIR,minutes,Temps de préparation d'un coffret simple,OUI
+COUT_PREPARATION_COFFRET_COMPLEXE,À DÉFINIR,minutes,Temps de préparation d'un coffret complexe,OUI
+COUT_PREPARATION_COFFRET_PERSONNALISE,À DÉFINIR,minutes,Temps de préparation d'un coffret personnalisé,OUI
+TAUX_HORAIRE_PREPARATION,À DÉFINIR,€ HT / heure,Coût horaire de main-d'œuvre,OUI
+TAUX_MARGE_CIBLE_ESSENTIEL,À DÉFINIR,%,Taux de marge visé sur la gamme Essentiel,OUI
+TAUX_MARGE_CIBLE_SIGNATURE,À DÉFINIR,%,Taux de marge visé sur la gamme Signature,OUI
+TAUX_MARGE_CIBLE_PRESTIGE,À DÉFINIR,%,Taux de marge visé sur la gamme Prestige,OUI
+TOLERANCE_BUDGET_INFERIEURE,À DÉFINIR,%,Écart accepté sous le budget client,OUI
+TOLERANCE_BUDGET_SUPERIEURE,À DÉFINIR,%,Écart accepté au-dessus du budget client,OUI
+DIVISEUR_POIDS_VOLUMETRIQUE,À DÉFINIR,—,Diviseur transporteur pour le poids volumétrique,OUI
+SEUIL_PRODUIT_LOURD,1000,g,Seuil utilisé pour le tag PRODUIT_LOURD (paramétrable),OUI
+SEUIL_FAIBLE_COUT_LOGISTIQUE,300,g,Seuil utilisé pour le tag FAIBLE_COUT_LOGISTIQUE,OUI
+PALIERS_NOBLESSE_PRIX,"2,50 / 5 / 10 / 25 €",€ HT,Paliers de prix d'achat utilisés pour la noblesse proposée,OUI
+ECART_MAX_ALTERNATIVE,40,%,Écart de prix maximal entre un produit et son alternative,OUI
+PRIORITE_MOTEUR,"1 besoin client, 2 budget, 3 cohérence, 4 qualité perçue, 5 niveau de gamme, 6 disponibilité, 7 logistique, 8 marge",—,Hiérarchie de décision demandée par le client,OUI

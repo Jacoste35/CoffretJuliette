@@ -1,0 +1,6 @@
+cle_source,type_cle,categorie_defaut,sous_categorie_defaut,justification
+TATASSE Sachet Kraft 100g,producteur_colonne_A,BOISSON_SANS_ALCOOL,THE_ET_INFUSION,"La colonne FOURNISSEURS du tarif indique elle-même « TATASSE Sachet Kraft 100g » : toute la gamme est en sachets de thé/tisane 100 g. S'applique aux libellés sans mot-clé (NORMAND Bayeux…, D-Day Parachutes…)"
+CROCAEN'T billes chocolatées,producteur_colonne_A,CONFISERIE,BONBON_ET_CONFISERIE,La colonne FOURNISSEURS indique elle-même « billes chocolatées » ; les libellés ne décrivent que le contenant
+BARBAQUES charcutier salaisonnier,producteur_colonne_A,TRAITEUR_CHARCUTERIE,CHARCUTERIE_ET_TERRINE,La colonne FOURNISSEURS indique elle-même « charcutier salaisonnier »
+LISANE,producteur_colonne_A,COSMETIQUE_BIEN_ETRE,SOIN,Gamme exclusivement cosmétique dans le tarif
+CARAMELS ISIGNY 2026,onglet,CONFISERIE,CARAMEL,"L'onglet entier est le catalogue tarifé « CARAMELS ISIGNY 2026 » : le repli caramel est documenté par le titre de l'onglet et les titres de gammes"

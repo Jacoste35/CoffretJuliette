@@ -1,0 +1,11 @@
+﻿id_coffret,id_produit,nom_produit,quantite,role_dans_le_coffret,source
+COF-0001,PROD-0307,Coffret 2 x 20cl INCLUS AVEC LES 20 CL SUR DEMANDE,1,COFFRET COMPLET FOURNISSEUR,Tarif et bon de commande 2026 – onglet « TARIF NORMAND DIRECT 2026 »
+COF-0002,PROD-0391,Pack 6 bouteilles 33 cl,1,COFFRET COMPLET FOURNISSEUR,Tarif et bon de commande 2026 – onglet « TARIF NORMAND DIRECT 2026 »
+COF-0003,PROD-0392,Pack 6 bouteilles 33 cl + 2 verres,1,COFFRET COMPLET FOURNISSEUR,Tarif et bon de commande 2026 – onglet « TARIF NORMAND DIRECT 2026 »
+COF-0004,PROD-0393,Pack 3 bouteilles 75 cl,1,COFFRET COMPLET FOURNISSEUR,Tarif et bon de commande 2026 – onglet « TARIF NORMAND DIRECT 2026 »
+COF-0005,PROD-0394,Pack 1 bouteilles 75 cl + 2 verres,1,COFFRET COMPLET FOURNISSEUR,Tarif et bon de commande 2026 – onglet « TARIF NORMAND DIRECT 2026 »
+COF-0006,PROD-0395,Demi mètre craft logoté composé de 9 bières 33 cl,1,COFFRET COMPLET FOURNISSEUR,Tarif et bon de commande 2026 – onglet « TARIF NORMAND DIRECT 2026 »
+COF-0007,PROD-0417,"Coffret 3 X 20 cl Gin, Vodka et Cold brew,",1,COFFRET COMPLET FOURNISSEUR,Tarif et bon de commande 2026 – onglet « TARIF NORMAND DIRECT 2026 »
+COF-0008,PROD-0502,Coffret 480gr,1,COFFRET COMPLET FOURNISSEUR,Tarif et bon de commande 2026 – onglet « TARIF NORMAND DIRECT 2026 »
+COF-0009,PROD-0698,COFFRET TRIO BOIS,1,COFFRET COMPLET FOURNISSEUR,billy.pdf – tarif SARL Domaine de Billy « Prix de vente à partir de 2026 » – page 3
+COF-0010,PROD-0699,COFFRET TRIO+VERRE,1,COFFRET COMPLET FOURNISSEUR,billy.pdf – tarif SARL Domaine de Billy « Prix de vente à partir de 2026 » – page 3

@@ -1,0 +1,829 @@
+﻿id_produit,nom_produit,tag,origine_du_tag,statut
+PROD-0001,Apéro tomate/paprika 100 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0002,Pailles feuilletées salées 100 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0003,Palets Camembert du Cotentin pavot 100 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0004,Biscuits assortiment 250 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0005,Boutons de la Manche 250 grs moins de 12,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0006,Boutons de la Manche 250 grs/ carton de 12,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0007,Cookies pépite de chocolat 220 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0008,Coquilles Quinéville 165 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0009,Coquilles Quinéville 80 grs mini 50 paquets,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0010,Coquilles de Quinéville trio 165 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0011,Coquilles trio 80 grs mini 50 paquets,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0012,Croquant aux amandes 125 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0013,Croquenoisette chocolat 180 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0014,Croquenoisettes 180 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0015,Croquentin 220 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0016,Croquet Calvados 180 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0017,Financier sachet 180 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0018,Financiers boite 250 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0019,Pailles feuilletées au sucre 150 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0020,Sablé chocolat enrobage chocolat lait 180 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0021,Sablé éclats de caramel 180 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0022,Sablé éclats caramel 110 grs mini 50 paquets,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0023,Sablé spéculos 250 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0024,Sablés Mamie 220 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0025,Tuiles pâtissières 150 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0026,Sablette mendiante chocolat 130 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0027,Tuiles chocolat noir 150gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0028,Tuiles chocolat lacté 150gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0029,Tuiles chocolat noir et lacté 200gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0030,Pâte de pommes 300 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0031,Batonnet feuilleté noir 200 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0032,Grignotines amandes noisettes 200 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0033,Teurgoule nature 280 g,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0036,Teurgoule cannelle 280 g,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0039,Confiture de lait nature 250 g,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0040,Confiture de lait éclats de pralin 250 g,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0041,Confiture de lait chocolat 250 g / 20 P,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0042,Confiture de lait fleur sel Guérande 250 g / 20 P,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0043,Confiture figue 280 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0044,Confiture orange 280 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0045,Confiture framboise 280 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0046,Confiture mure 280 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0047,Confiture fraise 280 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0048,Confiture abricot 280 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0049,Confiture de rhubarbe 280 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0050,Confiture de Myrtilles 280 grs NOUVEAU,NOUVEAUTE,Calculé à partir des données documentées,À VALIDER
+PROD-0050,Confiture de Myrtilles 280 grs NOUVEAU,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0051,Confiture de Fraise Ananas 280 grs NOUVEAU,NOUVEAUTE,Calculé à partir des données documentées,À VALIDER
+PROD-0051,Confiture de Fraise Ananas 280 grs NOUVEAU,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0052,Confiture pomme au cidre 280 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0053,Confiture pomme caramel 280 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0054,Confiture pomme rhubarbe 280 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0055,Confiture fraise rhubarbe 280 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0056,Confiture fruits rouges 280 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0057,Confit de cidre 100 gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0058,Confit de poiré 100 gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0059,Moutarde pommeau 100 gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0060,Moutarde Calvados 100 gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0061,Moutarde pomme 100 gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0062,Moutarde framboise 100 gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0063,Confit d'oignons 100 gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0064,Chutney de figue 100 gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0065,Chutney de pomme 100 gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0066,Riz au lait de Normandie 180 gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0067,Riz au lait de Normandie Eclats caramel d'Isigny 180 gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0068,Riz au lait de Normandie 120 gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0069,Riz au lait de Normandie Eclats caramel d'Isigny 120 gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0070,Crème aux œufs à la crème d'Isigny 180 gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0071,Crème aux œufs aux éclats de caramel d'Isigny 180 gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0072,Crème aux œufs à la crème d'Isigny 120 gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0073,Crème aux œufs aux éclats de caramel d'Isigny 120 gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0074,Boudin campagnard aux pomme 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0075,Terrine de faisan au Calvados 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0076,Terrine de lièvre au Calvados 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0077,Terrine pomme porc andouille 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0078,Terrine de lapin au pommeau 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0079,Terrine de canard aux pommes 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0080,Terrine de campagne 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0081,Terrine de campagne au cidre 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0082,Terrine porc Livarot 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0083,Terrine porc camembert 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0084,Rillettes de porc à l'anciènne 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0085,Rillettes de porc fumé 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0086,Terrine campagne pomme foie gras 90 grs,PRODUIT_DE_NOEL,Calculé à partir des données documentées,À VALIDER
+PROD-0086,Terrine campagne pomme foie gras 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0087,Pâté de foie aux pommes calva 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0088,Rillettes du Cotentin 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0089,Rillettes de poulet au poivre vert 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0090,Rillettes de poulet citron confit 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0091,Rilletes de poulet au piment d'Espelette 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0092,Rillettes de canard au foie gras 90 grs,PRODUIT_DE_NOEL,Calculé à partir des données documentées,À VALIDER
+PROD-0092,Rillettes de canard au foie gras 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0093,Boudin campagnard aux pommes 180 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0094,Pâté de foie aux pommes calva 180 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0095,Terrine de campagne 180 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0096,Rillettes de porc fumé 180 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0097,Rillettes de porc à l'anciènne 180 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0098,Rillettes du Cotentin 180 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0099,Terrine de canard aux pommes 180 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0100,Terrine de lapin au pommeau 180 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0101,Terrine porc livarot 180 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0102,Terrine porc camembert 180 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0103,Terrine campagne au cidre 180 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0104,Terrine campagne pomme foie gras 180 g,PRODUIT_DE_NOEL,Calculé à partir des données documentées,À VALIDER
+PROD-0104,Terrine campagne pomme foie gras 180 g,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0105,Terrine de lièvre au Calvados 180 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0106,Terrine de faisan au Calvados 180 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0107,Terrine pomme porc andouille 180 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0108,Rillettes de poulet citron confit 180 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0109,Rillettes de poulet piment d'Espelette 180 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0110,Rillettes de poulet poivre vert 180 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0111,Rillettes de canard au foie gras 180 grs,PRODUIT_DE_NOEL,Calculé à partir des données documentées,À VALIDER
+PROD-0111,Rillettes de canard au foie gras 180 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0112,Foie gras de canard pot le parfait 120 grs,PRODUIT_DE_NOEL,Calculé à partir des données documentées,À VALIDER
+PROD-0112,Foie gras de canard pot le parfait 120 grs,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0112,Foie gras de canard pot le parfait 120 grs,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0113,Foie gras de canard pot le parfait 180 grs,PRODUIT_DE_NOEL,Calculé à partir des données documentées,À VALIDER
+PROD-0113,Foie gras de canard pot le parfait 180 grs,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0113,Foie gras de canard pot le parfait 180 grs,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0125,Soupe de poisson 50 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0127,Velouté de homard 50 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0129,Soupe d'étrilles 50 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0131,Soupe de langoustines 50 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0132,Thon ail et fines herbes 90 g,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0133,Deux saumon et basilic 90 g  NOUVEAU,NOUVEAUTE,Calculé à partir des données documentées,À VALIDER
+PROD-0133,Deux saumon et basilic 90 g  NOUVEAU,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0134,St jacques éclats de porc fumés 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0135,St jacques algues 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0136,St jacques chorizo 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0137,Sardine piment d'Espelette 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0138,Rouget poireau 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0139,Maquereaux en rillettes 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0140,Crevette mangue 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0141,Cabillaud fumé 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0142,Boudin gelée de pomme 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0143,Poulet caramel beurre salé 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0144,Andouille pommeau 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0145,Rillette au Chorizo 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0146,Camembert au chorizo 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0147,Brie de Meaux cernaux de noix 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0148,Livarot Calvados 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0149,Pont l'évêque échalote 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0150,Chèvre confit de figue 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0151,Bleu tomates confites 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0152,Neufchâtel cramberries 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0153,St jacques foie gras 90 grs,PRODUIT_DE_NOEL,Calculé à partir des données documentées,À VALIDER
+PROD-0153,St jacques foie gras 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0154,Ris de veau cèpes 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0155,Saumon  oseille 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0156,Lotte jambon fumé 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0159,Terrine de haddock fumé 150 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0160,Terrine saumon fumé 180 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0177,Rillettes de saumon noix st Jacques 140 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0178,Rillettes de truite noix de st jacques 140 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0179,Terrine de truite fumée 140 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0180,Rillettes de hareng 140 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0181,Rillettes de lieu andouille de Vire 140 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0182,Rillettes de maquereaux moutarde 140grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0183,Rillettes de saumon 140 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0184,Rillettes de saumon à l'aneth fraîche 140 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0185,Rillettes de saumon au camembert 140 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0186,Rillettes de truite 140 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0187,Rillettes truite moutarde ancienne 140 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0188,Rillettes de truite à l'aneth fraîche 140 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0189,Rillettes saumon curry 140 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0190,Rillettes de langoustines 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0191,Rillettes de homard 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0192,Rillettes de lotte 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0193,Rillettes de lotte au chorizo 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0194,Rillettes noix de st jacques pomme miel 85 g,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0195,Rillettes de truite fumée au safran 90 g,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0196,Rillettes saumon aux noix  St Jacques 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0197,Rillettes de truite noix de st jacques 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0198,Terrine de haddock 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0199,Terrine de truite fumée 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0200,Terrine saumon fumé 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0201,Rillettes saumon au miel et curry 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0202,Rillettes de hareng à la tomate 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0203,Rillettes maquereaux moutarde 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0204,Rillettes de sardine 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0205,Rillettes de sardine aux olives 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0206,Rillettes de saumon 90 grs/12,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0207,Rillettes de saumon à l'aneth fraîche 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0208,Rillettes de saumon au confit d'oignon 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0209,Rillettes de truite 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0210,Rillettes de truite à l'aneth fraîche 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0211,Rillettes de truite moutarde ancienne 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0212,Rillettes lieu andouille de Vire 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0213,rillettes sardine à la tomate 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0214,Rillettes sardine confit d'oignon 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0215,Rillettes saumon à l'andouille de Vire 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0216,Rillettes saumon au curry 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0217,Rillettes saumon camembert 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0218,Rillettes saumon chèvre 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0219,Mousse de saumon 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0220,Mousse de truite 90 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0221,Rouille 85 grs,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0222,"Café ""la tasse de Lola"" 250 grs",FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0223,"Café grains ""la tasse de Lola"" 250 grs",FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0224,Thé noir  God save the tea,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0225,Thé noir Vahiné,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0226,Thé noir Blue twist,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0227,Thé noir Back in Black,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0228,Thé noir Jeu de l'agrume,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0229,Thé vert Chaud Mojito,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0230,Thé vert Tasse de Génie,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0231,Thé vert Hakuna Matatasse,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0232,Thé vert Jardin d'agrumes,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0233,Thé vert Rouge aux joues,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0234,Thé blanc Blanc de poire,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0235,Thé blanc Tasse des Bois,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0236,Thé blanc White Sweetness,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0237,Tisane Bien être Stop Migraine,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0238,Tisane Bien être Digest Cup,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0239,Tisane Bien être Oust le rhume,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0240,Tisane Bien être Punch Power,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0241,Tisane Bien être SO Quiet,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0242,Tisane fruitée La Reine encahntée,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0243,Tisane fruitée Sorbet Exotique,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0244,Tisane fruitée La Dame de cœur,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0245,Detox Jeune et jolie,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0246,Detox Beau Teint,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0247,Detox Chill Time,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0248,Maté KA'MATE KA'MATE,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0249,Maté Balance,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0250,Maternité Divine Mama,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0251,Maternité Voie Lactée,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0252,Rooibos Lemon Curd,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0253,Rooibos Cheri Coco,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0254,Rooibos Saveur Macaron,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0255,Rooibos Menthe Givrée,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0256,Rooibos Agrumes Tonic,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0257,NORMAND Cambremer Pays D'Auge,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0258,NORMAND Rouen Gros Horloge,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0259,NORMAND Bayeux et son Bessin,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0260,NORMAND Caen Ville historique,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0261,NORMAND Bagnoles de l'Orne,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0262,NORMAND Mont Saint Michel,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0263,D-Day Plage du debarquement,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0264,D-Day Normandie D-DAY,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0265,D-Day Operation Overlord,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0266,D-Day Parachutes,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0267,D-Day Les Alliés,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0268,D-Day God Save The Queen,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0269,MOUTARDE 100g Pomme Calvados,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0270,MOUTARDE 100g Camembert,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0271,MOUTARDE 100g à l'ancienne au Cidre,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0272,MOUTARDE 100g à l'ail Noir,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0273,MOUTARDE 100g au Piment d'Espelette,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0274,MOUTARDE 100g Poivre Voantsy Perifery,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0275,CONFITURE pomme caramel 180 gr Mont sr Michel,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0276,CONFITURE poire vanille 180 gr Plage,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0277,CONFITURE fruits rouges 180 gr Champs de course,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0278,CARAMELS d'Isigny Fondant beurre salé 150 g Caen,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0279,CARAMELS d'Isigny beurre salé 150 g Deauville,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0280,CARAMELS d'Isigny 150 g Assortiment Normand Vache,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0281,CARAMELS d'Isigny 200 g Assortiment Normand,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0282,CARAMELS 1/2 sucrette 100g Ouistreham B-LEC,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0283,CARAMELS 1/2 sucrette 100g Caen château B-LEC,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0284,BISCUITS 150g CAEN Mairie,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0285,BISCUITS 150g Ouistreham B-LEC,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0286,BISCUITS 150g Caen Château B-LEC,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0287,BISCUITS 150g Caen cœur de ville Aquarelle,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0288,Biscuits 150g Pays D'Auge Aquarelle,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0289,Biscuits 150g Cambremer Aquarelle,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0290,POMMEAU 35cl Pique-nique sous les pommiers,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0291,Caramels d'Isigny beurre salé 150 g  D-DAY drapeau,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0292,Caramels d'Isigny 1/2 sucrette 100 g Parachute,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0293,Caramels d'Isigny 1/2 sucrette 100 g OPERATION OVERLORD,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0294,Biscuits 120g JEEP,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0295,Biscuits 120g Barge,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0296,Calvados Arrangé Pomme Vanille 70 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0296,Calvados Arrangé Pomme Vanille 70 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0297,Calvados Arrangé Kumquat Café 70 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0297,Calvados Arrangé Kumquat Café 70 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0298,Calvados Arrangé Banane Vanille 70 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0298,Calvados Arrangé Banane Vanille 70 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0299,Calvados Arrangé Pomme Caramel 70 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0299,Calvados Arrangé Pomme Caramel 70 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0300,Calvados Arrangé Fraise Poivre de Sichuan 70 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0300,Calvados Arrangé Fraise Poivre de Sichuan 70 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0301,Calvados Arrangé Epices de Noël Clémentine 70 cl,PRODUIT_DE_NOEL,Calculé à partir des données documentées,À VALIDER
+PROD-0301,Calvados Arrangé Epices de Noël Clémentine 70 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0301,Calvados Arrangé Epices de Noël Clémentine 70 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0302,Calvados Arrangé Pomme Menthe 70 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0302,Calvados Arrangé Pomme Menthe 70 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0303,Calvados Arrangé Ananas Caramel fleur de sel 70 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0303,Calvados Arrangé Ananas Caramel fleur de sel 70 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0304,Calvados Arrangé Framboise Basilic,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0305,Calvados Arrangé Bergamote Noix de cajou,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0306,Calva Arrangé Banane extra mûre vanille 18 mois 50 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0306,Calva Arrangé Banane extra mûre vanille 18 mois 50 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0307,Coffret 2 x 20cl INCLUS AVEC LES 20 CL SUR DEMANDE,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0308,Calvados Arrangé Pomme Vanille 20 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0308,Calvados Arrangé Pomme Vanille 20 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0309,Calvados Arrangé Kumquat Café 20 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0310,Calvados Arrangé Banane Vanille 20 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0310,Calvados Arrangé Banane Vanille 20 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0311,Calvados Arrangé Pomme Caramel 20 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0312,Cidre bio Cotentin AOC brut  75 cl,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0312,Cidre bio Cotentin AOC brut  75 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0313,Cidre bio Cotentin AOC brut 2018 et 2019 150 cl,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0313,Cidre bio Cotentin AOC brut 2018 et 2019 150 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0313,Cidre bio Cotentin AOC brut 2018 et 2019 150 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0314,Grande cuvée Cotentin AOC extra brut 2018-2019 75 cl,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0314,Grande cuvée Cotentin AOC extra brut 2018-2019 75 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0314,Grande cuvée Cotentin AOC extra brut 2018-2019 75 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0315,Cidre bio Cotentin AOC extra brut 2018 puis 2019 150 cl,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0315,Cidre bio Cotentin AOC extra brut 2018 puis 2019 150 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0315,Cidre bio Cotentin AOC extra brut 2018 puis 2019 150 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0316,Cidre bio cuvée gourmande demi sec 75 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0318,Cidre bio micro cuvée N°1 vieilli fût chêne150 cl 2019,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0319,Cidre bio micro cuvée N°2 cidre dégorgé 75 cl 2020,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0320,Cidre bio micro cuvée N°3 cidre fermenté barriques de vin,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0323,Amour d'Hérout brut 33 cl cidre IGP,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0324,Amour d'Hérout brut 75 cl cidre IGP,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0325,Amour d'Hérout doux 33 cl cidre IGP,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0326,Calvados Héritage 12 ans d'âge 20 cl,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0326,Calvados Héritage 12 ans d'âge 20 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0326,Calvados Héritage 12 ans d'âge 20 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0327,Calvados Héritage 12 ans d'âge 35 cl,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0327,Calvados Héritage 12 ans d'âge 35 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0327,Calvados Héritage 12 ans d'âge 35 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0328,Calvados Héritage 12 ans d'âge 70 cl,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0328,Calvados Héritage 12 ans d'âge 70 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0328,Calvados Héritage 12 ans d'âge 70 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0329,Calvados Héritage 12 ans d'âge 150 cl,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0329,Calvados Héritage 12 ans d'âge 150 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0329,Calvados Héritage 12 ans d'âge 150 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0330,Calvados AOC-XO hors d'âge 6 ans 20 cl,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0330,Calvados AOC-XO hors d'âge 6 ans 20 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0330,Calvados AOC-XO hors d'âge 6 ans 20 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0331,Calvados AOC-XO hors d'âge 6 ans 35 cl,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0331,Calvados AOC-XO hors d'âge 6 ans 35 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0331,Calvados AOC-XO hors d'âge 6 ans 35 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0332,Calvados AOC-XO hors d'âge 6 ans 70 cl,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0332,Calvados AOC-XO hors d'âge 6 ans 70 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0332,Calvados AOC-XO hors d'âge 6 ans 70 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0333,Calvados AOC-XO hors d'âge 6 ans 150 cl,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0333,Calvados AOC-XO hors d'âge 6 ans 150 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0333,Calvados AOC-XO hors d'âge 6 ans 150 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0334,Calvados AOC-VSOP vielle réserve 4 ans 20 cl,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0334,Calvados AOC-VSOP vielle réserve 4 ans 20 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0334,Calvados AOC-VSOP vielle réserve 4 ans 20 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0335,Calvados AOC-VSOP vielle réserve 4 ans 35 cl,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0335,Calvados AOC-VSOP vielle réserve 4 ans 35 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0335,Calvados AOC-VSOP vielle réserve 4 ans 35 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0336,Calvados AOC-VSOP vielle réserve 4 ans 70 cl,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0336,Calvados AOC-VSOP vielle réserve 4 ans 70 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0336,Calvados AOC-VSOP vielle réserve 4 ans 70 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0337,Calvados AOC-VSOP vielle réserve 4 ans 150 cl,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0337,Calvados AOC-VSOP vielle réserve 4 ans 150 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0337,Calvados AOC-VSOP vielle réserve 4 ans 150 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0338,Calvados VS 2 ans 20 cl,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0338,Calvados VS 2 ans 20 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0338,Calvados VS 2 ans 20 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0339,Calvados VS 2 ans 70 cl,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0339,Calvados VS 2 ans 70 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0339,Calvados VS 2 ans 70 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0340,BLANCHE d'alambic bio 70 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0340,BLANCHE d'alambic bio 70 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0341,BLANCHE d'alambic bio 20 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0341,BLANCHE d'alambic bio 20 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0342,Pommeau bio 70 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0342,Pommeau bio 70 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0343,pommeau bio 20 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0343,pommeau bio 20 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0344,Jus de pomme bio 25 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0345,Jus de pomme bio 100 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0347,Vinaigre de cidre bio 25 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0348,Vinaigre de cidre bio 50 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0349,"Jus de pomme Pétillant bio ""Prout"" 75cl NOUVEAU",NOUVEAUTE,Calculé à partir des données documentées,À VALIDER
+PROD-0350,Cidre Cotentin extra brut 75 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0351,Cidre Cotentin extra brut selection 75 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0352,Cidre Cotentin brut 75 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0353,Cidre Cotentin brut 33 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0354,Cidre Cotentin demi-sec 75 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0355,Cidre Cotentin doux 75 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0356,Fine de Claids 35 cl 40°,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0356,Fine de Claids 35 cl 40°,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0357,Calvados 5 ans 35cl,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0357,Calvados 5 ans 35cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0358,Calvados 5 ans 70cl,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0358,Calvados 5 ans 70cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0359,Calvados 7 ans 70cl,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0359,Calvados 7 ans 70cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0360,Fine de Claids 70 cl 40°,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0360,Fine de Claids 70 cl 40°,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0361,Pommeau de Normandie 35 cl 17°,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0361,Pommeau de Normandie 35 cl 17°,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0361,Pommeau de Normandie 35 cl 17°,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0362,Pommeau de Normandie 70 cl 17°,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0362,Pommeau de Normandie 70 cl 17°,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0362,Pommeau de Normandie 70 cl 17°,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0363,Apéro Claids 70 cl 12°,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0363,Apéro Claids 70 cl 12°,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0364,"Liqueur 44 ""le chiffre Claids"" 35 cl 32°",PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0364,"Liqueur 44 ""le chiffre Claids"" 35 cl 32°",PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0365,"Liqueur 44 ""le chiffre Claids"" 70 cl 32°",PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0365,"Liqueur 44 ""le chiffre Claids"" 70 cl 32°",PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0366,"""Keys' Claids"" 70 cl 41°",PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0366,"""Keys' Claids"" 70 cl 41°",PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0367,Jus de pomme 100 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0368,Jus de pomme 25 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0369,Aigrette de Claids (vinaigre de cidre) 50 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0370,Crème de Calvados 70 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0370,Crème de Calvados 70 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0371,Crème de Calvados 35 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0371,Crème de Calvados 35 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0372,Liqueur 44 35 cl 40°,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0372,Liqueur 44 35 cl 40°,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0373,Bière blonde 33 cl / 24 Au prés de ma blonde,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0374,Bière blonde 75 cl / 9 Au prés de ma blonde,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0375,Bière ambrée 33 cl / 24 Ambrée du hameau,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0376,Bière ambrée 75 cl / 9 Ambrée du hameau,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0377,Bière blanche 33 cl / 24 La Caennette,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0378,Bière blanche 75 cl / 9 La Caennette,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0379,Bière brune 33 cl / 24 Quai des brune,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0380,Bière brune 75 cl / 9 Quai des brunes,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0381,Bière triple 33 cl / 24 Triple à la mode de Caen,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0382,Bière triple 75 cl / 9 Triple à la mode de Caen,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0383,Bière rousse Conté fleurette 33 cl / 24,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0384,Bière rousse Conté fleurette 75 cl / 9,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0385,Bière blonde Pale Ale  33 cl / 24 la Suisse Normande,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0386,Bière blonde Pale Ale  75 cl / 9 la Suisse Normande,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0387,Bière de Noel 33 cl / 24 ça sent le sapin,PRODUIT_DE_NOEL,Calculé à partir des données documentées,À VALIDER
+PROD-0387,Bière de Noel 33 cl / 24 ça sent le sapin,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0388,Bière de Noel 75 cl / 9 ça sent le sapin,PRODUIT_DE_NOEL,Calculé à partir des données documentées,À VALIDER
+PROD-0388,Bière de Noel 75 cl / 9 ça sent le sapin,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0389,Bière édition limité du moment 33 cl / 24,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0390,Bière édition limité du moment 75 cl / 9,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0391,Pack 6 bouteilles 33 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0392,Pack 6 bouteilles 33 cl + 2 verres,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0393,Pack 3 bouteilles 75 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0394,Pack 1 bouteilles 75 cl + 2 verres,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0395,Demi mètre craft logoté composé de 9 bières 33 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0395,Demi mètre craft logoté composé de 9 bières 33 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0396,Pinte 50 cl Brasserie Lalie,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0397,Verre à bière Brasserie Lalie 25 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0398,CONNIVENCE BLANC 75 cl  14° en coffret de 6,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0398,CONNIVENCE BLANC 75 cl  14° en coffret de 6,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0399,PINOT NOIR 50 CL rouge 12 ° en coffret de 6,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0400,PINOT NOIR magnum 150 CL rouge 12 ° en coffret de 3,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0400,PINOT NOIR magnum 150 CL rouge 12 ° en coffret de 3,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0401,AUXERROIS 50 CL blanc 12 °  en coffret de 6,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0402,PINOT Gris 50 CL en coffret de 6,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0403,AUXERROIS magnum 150 CL blanc 12 °  en coffret de 3,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0403,AUXERROIS magnum 150 CL blanc 12 °  en coffret de 3,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0404,Gin 40° 70 cl   Echantillon gratuit pour 6 sur demande,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0404,Gin 40° 70 cl   Echantillon gratuit pour 6 sur demande,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0405,Gin 40 ° 20 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0406,Gin 40° 70 cl   Concombre-basilic-pomme Echantillon gratuit sur demande,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0406,Gin 40° 70 cl   Concombre-basilic-pomme Echantillon gratuit sur demande,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0407,Gin fusion  21 ° Rhubarbe Menthe 50 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0407,Gin fusion  21 ° Rhubarbe Menthe 50 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0408,Gin fusion 21° Framboise Hibiscus 50 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0408,Gin fusion 21° Framboise Hibiscus 50 cl,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0409,Vodka 40° 70 cl  Echantillon gratuit pour 6 sur demande,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0409,Vodka 40° 70 cl  Echantillon gratuit pour 6 sur demande,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0410,Vodka Normande 40° 20 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0411,Liqueur de café Cold brew 25° 70 cl Echantillon gratuit pour 6 sur demande,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0411,Liqueur de café Cold brew 25° 70 cl Echantillon gratuit pour 6 sur demande,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0412,Liqueur de café Cold brew 25° 20 cl,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0413,Limoncello 50 cl Liqueur de citron Echantillon gratuit pour 6 sur demande,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0413,Limoncello 50 cl Liqueur de citron Echantillon gratuit pour 6 sur demande,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0414,"Rhum botanique ""Jardin à l'Anglaise"" 70 cl 40° Nouveau design",NOUVEAUTE,Calculé à partir des données documentées,À VALIDER
+PROD-0414,"Rhum botanique ""Jardin à l'Anglaise"" 70 cl 40° Nouveau design",PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0414,"Rhum botanique ""Jardin à l'Anglaise"" 70 cl 40° Nouveau design",PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0415,"Rhum botanique ""Le chaleureux"" 70 cl 40° Nouveau design",NOUVEAUTE,Calculé à partir des données documentées,À VALIDER
+PROD-0415,"Rhum botanique ""Le chaleureux"" 70 cl 40° Nouveau design",PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0415,"Rhum botanique ""Le chaleureux"" 70 cl 40° Nouveau design",PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0416,"Les singuliers ""Cask finish"" 50 cl",PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0416,"Les singuliers ""Cask finish"" 50 cl",PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0417,"Coffret 3 X 20 cl Gin, Vodka et Cold brew,",PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0417,"Coffret 3 X 20 cl Gin, Vodka et Cold brew,",PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0418,PASTIS du verger Echantillon gratuit pour 6 sur demande,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0421,Savon 100 grs lait,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0422,Savon 100 grs amande douce,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0423,Savon 100 grs chèvrefeuille,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0424,Savon 100 grs miel,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0425,Savon 100 grs thé,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0426,Savon 100 grs marine,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0427,Savon 100 grs rose,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0428,Savon 100 grs fleur de pommier,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0437,Crème hydratante 50 ml,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0438,Crème antiride 50 ml,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0439,Lait corporel 200 ml,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0442,Miel de Fleurs de Normandie 250gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0444,Miel d'Acacia 250gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0446,Miel de Tilleul 250gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0448,Miel de Chataigner 250gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0450,Miel de Foret 250gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0452,Pain D'épices Nature 100gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0453,Pain D'épices Nature 250gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0454,Pain D'épices aux pépites de Chocolats  250gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0455,Pain D'épices aux éclats de Noix  250gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0456,Pain D'épices aux écorces d'Oranges  250gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0457,Pain D'épices aux Figues 250gr (fin d'année),PRODUIT_DE_NOEL,Calculé à partir des données documentées,À VALIDER
+PROD-0457,Pain D'épices aux Figues 250gr (fin d'année),FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0458,Hydromel 75cl (fait a façon),PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0460,Bonbons au Miel 250gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0461,Bonbons au Miel et Eucalyptus 250gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0462,Bonbons au Miel et Sève de Pin 250gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0463,Bonbons Fourrés au Miel 250gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0464,Bonbons berlingot au Miel 150gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0465,Nougat tendre Amandes Noisettes 100gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0466,Nougat tendre Amandes Noisettes Pistaches 100gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0467,Nougat tendre Amandes Noisettes M&M's 100gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0468,Nougat tendre Noix de Pécan Caramel beurre salé 100gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0469,Bouchées Nougat tendre 100gr emballage individuel,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0470,Bouchées Nougat tendre emballage individuel EN VRAC,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0471,"Balsamique de pommes ""onctueux""  20cl",PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0472,"Cidre de Glace 37,5cl 12%",PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0473,Saucisson sec nature env 225gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0474,Saucisson épices vin rouge env 225gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0475,Chorisson env 225gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0476,Cœur de roti (COPPA) env 200gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0477,Noix de roti (LONZU) env 200gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0478,Bœuf Normand séché env 200gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0478,Bœuf Normand séché env 200gr,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0479,Gorge de porc séché facon Guanciale env 200gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0480,Saucisse seche env 175gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0482,Beurre de Cacahuètes Nature 300g,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0483,"Beurre de Cacahuètes ""Crunchy"" 300g",FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0484,"Beurre de Cacahuètes ""Chouchou"" 300g",FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0485,Beurre 100% Cacahuetes sans sucre ajouté 300g,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0486,Moscow Mule 70cl 16%,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0487,Pornstar Martini 70cl 16%,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0488,Espresso Martini 70cl 16%,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0489,Sex on the Beach 70cl 16%,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0490,Cosmopolitan 70cl 16%,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0491,American Plum Sour 70cl 16%,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0492,"Vodka Arrangée Mangue Abricot 70cl 16,2%",PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0493,"Vodka Arrangée Romarin Pamplemousse 70cl 16,2%",PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0494,"Vodka Arrangée Rhubarbe Sichuan 70cl 16,2%",PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0495,"Vodka Arrangée Banane Vanille 70cl 16,2%",PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0496,Petite boite ronde 90gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0497,Grande boite ronde 150gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0498,Sachet Kraft 100gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0499,Boite prestige 200gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0499,Boite prestige 200gr,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0500,Boite prestige 250gr,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0500,Boite prestige 250gr,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0501,Boite prestige 320gr,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0502,Coffret 480gr,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0503,Billes chocolatées Vrac,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0504,BOÎTE BOIS RONDE BEURRE SALÉ,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0505,BOÎTE BOIS RONDE BEURRE SALÉ,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0506,BOÎTE BOIS CARRÉE BEURRE SALÉ,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0507,BOÎTE BOIS CARRÉE BEURRE SALÉ,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0508,BOÎTE BOIS RONDE FONDANT BEURRE SALÉ,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0509,BOÎTE BOIS RONDE FONDANT BEURRE SALÉ,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0510,BOÎTE BOIS CARRÉE FONDANT BEURRE SALÉ,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0511,BOÎTE BOIS CARRÉE FONDANT BEURRE SALÉ,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0512,BOÎTE BOIS RONDE ASSORTIMENT TRADITION,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0513,BOÎTE BOIS RONDE ASSORTIMENT TRADITION,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0514,BOÎTE BOIS CARRÉE ASSORTIMENT TRADITION,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0515,BOÎTE BOIS CARRÉE ASSORTIMENT TRADITION,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0516,BOÎTE BOIS RONDE ASSORTIMENT FONDANTS,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0517,BOÎTE BOIS RONDE ASSORTIMENT FONDANTS,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0518,BOÎTE BOIS CARRÉE ASSORTIMENT FONDANTS,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0519,BOÎTE BOIS CARRÉE ASSORTIMENT FONDANTS,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0520,BOÎTE BOIS RONDE ASSORTIMENT NORMANDIE,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0521,BOÎTE BOIS RONDE ASSORTIMENT NORMANDIE,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0522,BOÎTE BOIS CARRÉE ASSORTIMENT NORMANDIE,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0523,BOÎTE BOIS CARRÉE ASSORTIMENT NORMANDIE,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0524,SACHET FONDANTS BEURRE SALÉ,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0525,SACHET FONDANTS NOISETTE,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0526,SACHET FONDANTS VANILLE,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0527,SACHET FONDANTS VANILLE MARBRÉ CHOCOLAT,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0528,SACHET BEURRE SALÉ,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0529,SACHET BEURRE SALÉ & CRÈME D’ISIGNY AOP,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0530,SACHET BEURRE DOUX D’ISIGNY AOP,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0531,SACHET CRÈME D’ISIGNY AOP,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0532,SACHET ASSORTIMENT FONDANTS,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0533,SACHET ASSORTIMENT TRADITION,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0534,SACHET ASSORTIMENT NORMANDIE,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0535,"BOÎTE MÉTAL À FENÊTRE ""GOÛT TATIN""",FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0536,"SACHET NŒUD ""GOÛT TATIN""",FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0537,BOÎTE CUBE BEURRE SALÉ,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0538,BOÎTE CUBE FONDANTS BEURRE SALÉ,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0539,BOÎTE CUBE ASSORTIMENT TRADITION,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0540,BOÎTE CUBE ASSORTIMENT NORMANDIE,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0541,BOÎTE FER FONDANTS,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0542,BOÎTE FER BEURRE SALÉ,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0543,BOÎTE FER ASSORTIMENT NORMANDIE,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0544,POT À LAIT,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0545,BOÎTE CIGARE,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0546,2 CV FOURGONNETTE,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0547,ASSORTIMENT NORMANDIE,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0547,ASSORTIMENT NORMANDIE,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0548,BEURRE SALÉ,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0548,BEURRE SALÉ,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0549,FONDANT BEURRE SALÉ,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0549,FONDANT BEURRE SALÉ,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0550,ASSORTIMENT FONDANTS,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0550,ASSORTIMENT FONDANTS,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0551,BOÎTE CIGARE,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0552,BOÎTE BOIS DEBARQUEMENT,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0553,FOLKLORE NORMAND,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0554,CARROUSEL,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0555,"BOÎTE ""PRESTIGE""",FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0556,"BOÎTE ""SOUVENIRS D’ENFANCE""",FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0557,"BOÎTE FER ""NOËL""",PRODUIT_DE_NOEL,Calculé à partir des données documentées,À VALIDER
+PROD-0557,"BOÎTE FER ""NOËL""",FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0558,"CITROËN 2CV ""NOËL""",PRODUIT_DE_NOEL,Calculé à partir des données documentées,À VALIDER
+PROD-0558,"CITROËN 2CV ""NOËL""",FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0559,"BOÎTE ""JOYEUSES FÊTES""",PRODUIT_DE_NOEL,Calculé à partir des données documentées,À VALIDER
+PROD-0559,"BOÎTE ""JOYEUSES FÊTES""",FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0560,CALENDRIER DE L'AVENT (Décor 09/2026),PRODUIT_DE_NOEL,Calculé à partir des données documentées,À VALIDER
+PROD-0560,CALENDRIER DE L'AVENT (Décor 09/2026),FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0560,CALENDRIER DE L'AVENT (Décor 09/2026),PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0561,BEURRE SALÉ,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0561,BEURRE SALÉ,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0562,FONDANTS BEURRE SALÉ,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0562,FONDANTS BEURRE SALÉ,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0563,ASSORTIMENT FONDANTS,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0563,ASSORTIMENT FONDANTS,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0564,ASSORTIMENT NORMANDIE,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0564,ASSORTIMENT NORMANDIE,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0565,ASSORTIMENT 9 FRUITS,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0565,ASSORTIMENT 9 FRUITS,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0566,ASSORTIMENT TRADITION,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0566,ASSORTIMENT TRADITION,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0567,ASSORTIMENT TRADITION,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0568,ASSORTIMENT NORMANDIE,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0569,ASSORTIMENT 5 FRUITS,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0570,BEURRE SALÉ,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0571,ASSORTIMENT FONDANTS,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0572,BOÎTE 2KG BEURRE SALÉ D’ISIGNY AOP,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0572,BOÎTE 2KG BEURRE SALÉ D’ISIGNY AOP,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0573,BOÎTE 2KG NOISETTE,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0573,BOÎTE 2KG NOISETTE,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0574,BOÎTE 2KG VANILLE,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0574,BOÎTE 2KG VANILLE,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0575,BOÎTE 2KG VANILLE MARBRÉ CHOCOLAT,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0575,BOÎTE 2KG VANILLE MARBRÉ CHOCOLAT,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0576,VRAC BEURRE SALÉ D’ISIGNY AOP,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0577,VRAC NOISETTE,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0578,VRAC VANILLE,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0579,VRAC VANILLE MARBRÉ CHOCOLAT,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0580,BOÎTE BOUCHÉES CARAMEL FONDANT BEURRE SALÉ,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0580,BOÎTE BOUCHÉES CARAMEL FONDANT BEURRE SALÉ,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0581,VRAC BEURRE SALÉ D’ISIGNY AOP,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0582,VRAC BEURRE SALÉ D’ISIGNY AOP,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0583,VRAC BEURRE DOUX D’ISIGNY AOP,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0584,VRAC CRÈME D’ISIGNY AOP,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0585,VRAC BEURRE SALÉ ET CRÈME D’ISIGNY AOP,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0586,VRAC GOÛT TATIN,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0587,VRAC CHOCOLAT,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0588,VRAC NOISETTE,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0589,VRAC CAFÉ,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0590,VRAC CALVADOS,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0591,VRAC POMME,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0592,VRAC ASSORTIMENT TRADITION,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0593,VRAC ASSORTIMENT NORMANDIE,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0594,VRAC BEURRE DOUX D’ISIGNY AOP,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0595,VRAC CAFÉ,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0596,VRAC CHOCOLAT,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0597,VRAC NOISETTE,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0598,BOÎTE 2KG CRÈME D’ISIGNY AOP,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0598,BOÎTE 2KG CRÈME D’ISIGNY AOP,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0599,BOÎTE 2KG BEURRE SALÉ D’ISIGNY AOP,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0599,BOÎTE 2KG BEURRE SALÉ D’ISIGNY AOP,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0600,BOÎTE 2KG BEURRE DOUX D’ISIGNY AOP,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0600,BOÎTE 2KG BEURRE DOUX D’ISIGNY AOP,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0601,BOÎTE 2KG CALVADOS,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0601,BOÎTE 2KG CALVADOS,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0602,BOÎTE 2KG GOÛT TATIN,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0602,BOÎTE 2KG GOÛT TATIN,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0603,BOÎTE 2KG POMME,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0603,BOÎTE 2KG POMME,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0604,BOÎTE 2KG GOÛT CONFITURE DE LAIT,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0604,BOÎTE 2KG GOÛT CONFITURE DE LAIT,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0605,BOÎTE 2KG MENTHE,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0605,BOÎTE 2KG MENTHE,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0606,BOÎTE 2KG PRUNEAU,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0606,BOÎTE 2KG PRUNEAU,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0607,BOÎTE 2KG MARRON,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0607,BOÎTE 2KG MARRON,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0608,BOÎTE 2KG NOIX,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0608,BOÎTE 2KG NOIX,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0609,BOÎTE 2KG MIEL,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0609,BOÎTE 2KG MIEL,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0610,BOÎTE 2KG CHOCOLAT,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0610,BOÎTE 2KG CHOCOLAT,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0611,BOÎTE 2KG CAFÉ,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0611,BOÎTE 2KG CAFÉ,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0612,BOÎTE 2KG NOISETTE,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0612,BOÎTE 2KG NOISETTE,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0613,BOÎTE 2KG MYRTILLE,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0613,BOÎTE 2KG MYRTILLE,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0614,BOÎTE 2KG CASSIS,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0614,BOÎTE 2KG CASSIS,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0615,BOÎTE 2KG FRAISE,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0615,BOÎTE 2KG FRAISE,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0616,BOÎTE 2KG MIRABELLE,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0616,BOÎTE 2KG MIRABELLE,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0617,BOÎTE 2KG BEURRE SALÉ D’ISIGNY AOP,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0617,BOÎTE 2KG BEURRE SALÉ D’ISIGNY AOP,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0618,BOÎTE 2KG BEURRE DOUX D’ISIGNY AOP,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0618,BOÎTE 2KG BEURRE DOUX D’ISIGNY AOP,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0619,BOÎTE 2KG CAFÉ,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0619,BOÎTE 2KG CAFÉ,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0620,BOÎTE 2KG CHOCOLAT,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0620,BOÎTE 2KG CHOCOLAT,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0621,BOÎTE 2KG NOISETTE,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0621,BOÎTE 2KG NOISETTE,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0622,CARAMEL À TARTINER AU BEURRE SALÉ,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0624,CARAMEL À TARTINER VANILLE,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0625,CARAMEL À TARTINER SAVEUR NOISETTE,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0626,CARAMEL À TARTINER CHOCOLAT,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0627,CARAMEL À TARTINER CALVADOS,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0628,ASSORTIMENT DE 5 MINI CARAMELS À TARTINER,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0633,COULIS DE CARAMEL AU BEURRE SALÉ,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0633,COULIS DE CARAMEL AU BEURRE SALÉ,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0635,ÉCLATS DE CARAMEL CALIBRE 1.5/4MM,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0637,ÉCLATS DE CARAMEL CALIBRE 4/8MM,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0639,POUDRE DE CARAMEL,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0640,CARAMEL CORSÉ AU BEURRE SALÉ,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0641,CARAMEL CORSÉ AU BEURRE SALÉ,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0641,CARAMEL CORSÉ AU BEURRE SALÉ,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0642,CARAMEL AU BEURRE SALÉ,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0643,CARAMEL AU BEURRE SALÉ,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0643,CARAMEL AU BEURRE SALÉ,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0645,POUDRE DE CARAMEL,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0645,POUDRE DE CARAMEL,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0646,POUDRE DE CARAMEL,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0648,"ÉCLATS DE CARAMEL 1,5/4 MM",PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0648,"ÉCLATS DE CARAMEL 1,5/4 MM",PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0649,"ÉCLATS DE CARAMEL 1,5/4 MM",PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0651,ÉCLATS DE CARAMEL 4/8 MM,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0651,ÉCLATS DE CARAMEL 4/8 MM,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0652,ÉCLATS DE CARAMEL 4/8 MM,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0653,CARAMELS FONDANTS BEURRE SALÉ À ENROBER,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0653,CARAMELS FONDANTS BEURRE SALÉ À ENROBER,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0654,DOYPACK POP CORN,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0655,SACHET DE NOUGATS,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0656,SUCETTES x100,PRODUIT_LOURD,Calculé à partir des données documentées,À VALIDER
+PROD-0656,SUCETTES x100,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0657,PRÉSENTOIR POUR 100 SUCETTES,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0658,COOKIES AUX ÉCLATS DE CARAMEL,FAIBLE_COUT_LOGISTIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0659,Cidre Corsé,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0660,Cidre Fruité,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0661,Cidre Fraîcheur,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0662,Cidre Tonique,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0663,Cidre Sauvage,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0664,Terroir Chic,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0665,Cidre Fruité,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0665,Cidre Fruité,NOUVEAUTE,Calculé à partir des données documentées,À VALIDER
+PROD-0666,Cidre Fraîcheur,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0667,Cidre Tonique,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0668,Fût Corsé,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0668,Fût Corsé,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0669,Fût Fraicheur,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0669,Fût Fraicheur,NOUVEAUTE,Calculé à partir des données documentées,À VALIDER
+PROD-0669,Fût Fraicheur,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0670,Poiré,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0671,Vinaigre de Cidre,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0672,Jus de pomme,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0673,Jus de pomme fraicheur,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0673,Jus de pomme fraicheur,NOUVEAUTE,Calculé à partir des données documentées,À VALIDER
+PROD-0674,Jus pétillant,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0675,BIB Jus de pomme,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0675,BIB Jus de pomme,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0676,Pomme Amour,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0676,Pomme Amour,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0677,Pomme Pétillant,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0677,Pomme Pétillant,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0678,Pomme Basilic,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0678,Pomme Basilic,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0679,Pomme Menthe,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0679,Pomme Menthe,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0680,Pomme Framboise,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0680,Pomme Framboise,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0681,Pomme Myrtille,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0681,Pomme Myrtille,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0682,Pomme Rhubarbe,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0682,Pomme Rhubarbe,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0683,Pomme Basilic,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0683,Pomme Basilic,NOUVEAUTE,Calculé à partir des données documentées,À VALIDER
+PROD-0683,Pomme Basilic,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0684,Pomme Menthe,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0684,Pomme Menthe,NOUVEAUTE,Calculé à partir des données documentées,À VALIDER
+PROD-0684,Pomme Menthe,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0685,Pomme Framboise,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0685,Pomme Framboise,NOUVEAUTE,Calculé à partir des données documentées,À VALIDER
+PROD-0685,Pomme Framboise,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0686,Pomme Myrtille,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0686,Pomme Myrtille,NOUVEAUTE,Calculé à partir des données documentées,À VALIDER
+PROD-0686,Pomme Myrtille,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0687,Cidre de glace,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0687,Cidre de glace,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0688,Cidre de glace,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0689,Pommeau de Normandie,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0689,Pommeau de Normandie,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0690,Pommeau de Normandie,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0690,Pommeau de Normandie,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0691,Esprit de Billy,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0691,Esprit de Billy,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0692,CALVADOS - 20 ANS,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0692,CALVADOS - 20 ANS,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0693,CALVADOS - 12 ANS,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0693,CALVADOS - 12 ANS,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0694,CALVADOS - HORS D'ÂGE,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0694,CALVADOS - HORS D'ÂGE,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0695,CALVADOS - HORS D'ÂGE,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0695,CALVADOS - HORS D'ÂGE,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0696,CALVADOS - V.S.O.P.,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0696,CALVADOS - V.S.O.P.,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0697,CALVADOS - FINE,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0697,CALVADOS - FINE,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0698,COFFRET TRIO BOIS,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0698,COFFRET TRIO BOIS,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0699,COFFRET TRIO+VERRE,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0699,COFFRET TRIO+VERRE,NOUVEAUTE,Calculé à partir des données documentées,À VALIDER
+PROD-0699,COFFRET TRIO+VERRE,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0700,Le Blanc Marin 75 cl btlle,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0700,Le Blanc Marin 75 cl btlle,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0700,Le Blanc Marin 75 cl btlle,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0701,Le Rosé Marin 75cl btlle,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0701,Le Rosé Marin 75cl btlle,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0702,Les Trois Flèches 75 cl btlle,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0702,Les Trois Flèches 75 cl btlle,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0702,Les Trois Flèches 75 cl btlle,PREMIUM,Calculé à partir des données documentées,À VALIDER
+PROD-0703,Les Hougues 75cl btlle,PRODUIT_LOCAL_EMBLEMATIQUE,Calculé à partir des données documentées,À VALIDER
+PROD-0703,Les Hougues 75cl btlle,PRODUIT_FRAGILE,Calculé à partir des données documentées,À VALIDER
+PROD-0703,Les Hougues 75cl btlle,PREMIUM,Calculé à partir des données documentées,À VALIDER

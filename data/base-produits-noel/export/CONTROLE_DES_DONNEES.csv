@@ -1,0 +1,41 @@
+﻿indicateur,valeur,commentaire
+Nombre de documents sources analysés,3,"1 classeur Excel (2 onglets), 2 PDF – voir onglet SOURCES"
+Nombre de fournisseurs / producteurs identifiés,32,Inclut 2 distributeurs/fabricants et les producteurs listés en colonne A du tarif Normand Direct
+dont canaux de commande directs identifiés,4,"Normand Direct Terroir, Caramels d'Isigny (canal à confirmer), Domaine de Billy, Domaine de Brucan"
+Nombre de produits,702,Lignes de statut PRODUIT
+Lignes informatives non comptées comme produits,1,Conservées dans l'onglet PRODUITS avec leur statut
+Nombre de références tarifées,702,Lignes de l'onglet TARIFS
+Produits sans prix,0,
+Produits sans fournisseur,0,
+Produits sans producteur identifié,0,
+Produits sans TVA indiquée,42,
+Produits sans origine documentée,612,Règle stricte : un produit n'est pas normand parce qu'il est distribué par une entreprise normande
+Produits normands confirmés,68,"Preuve = adresse du producteur dans son propre tarif, ou appellation protégée citée"
+dont Calvados (14),41,
+dont Manche (50),4,
+dont Orne (61),0,
+dont département normand à confirmer,23,
+Produits portant un indice de normandité dans leur seul nom,107,À vérifier : un nom commercial n'est pas une preuve d'origine
+Produits français confirmés,68,
+Produits d'origine non déterminée,634,
+Produits AVEC alcool (boisson alcoolisée),139,
+Produits SANS alcool,530,
+Produits contenant de l'alcool comme ingrédient,33,Ni « avec alcool » ni totalement neutre : à arbitrer pour les coffrets sans alcool
+Produits personnalisables (documenté),0,"Aucun document fourni ne mentionne de personnalisation (marquage, gravure, étiquette)"
+Produits dont la personnalisation reste à confirmer,702,
+Règles de panachage / conditions relevées,7,Onglet CONDITIONS_FOURNISSEURS
+Doublons potentiels (lignes de rapprochement),115,Aucune fusion effectuée – voir onglet DOUBLONS
+dont homonymies entre producteurs différents,0,
+Conflits de prix,2,Voir onglet CONFLITS
+Anomalies relevées dans les documents sources,4,Voir onglet ANOMALIES
+Règles de remise documentées,3,Aucune grille de remise quantitative (1-49 / 50-99 / 100-199…) n'existe dans les documents fournis
+Avantages commerciaux documentés,2,
+Produits avec poids net lu dans le document,481,
+Produits avec volume lu dans le document,209,
+Produits sans poids ni volume,12,
+Produits avec dimensions renseignées,0,Aucun document ne contient de dimensions : longueur/largeur/hauteur à mesurer ou à demander
+Produits avec prix de vente renseigné,0,"Aucun prix de vente n'existe : marge, taux de marge et scores de marge non calculables"
+Emballages référencés,0,Base EMBALLAGES à alimenter (aucun tarif emballage fourni)
+Tarifs de transport référencés,0,Base TARIFS_TRANSPORT à alimenter
+Alternatives produits calculées,3020,"Même sous-catégorie, même régime alcool, écart de prix ≤ 40 %"
+Total de champs marqués À CONFIRMER,24153,

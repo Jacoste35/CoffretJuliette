@@ -1,0 +1,42 @@
+page_source,section,article,mention,degre_ou_vat,volume,description,prix_ht,prix_hors_droits,droits,prix_droits_inclus,libelle_colonne_prix_source
+1,CIDRES,Cidre Corsé,,"5,5%",75cl,Notre brut avec ses notes d’amertume,"3,36 euros H.T.",,,,Prix de vente
+1,CIDRES,Cidre Fruité,,4%,75cl,Un demi-sec très rond alliant sucrosité et amertume avec délicatesse,"3,36 euros H.T.",,,,Prix de vente
+1,CIDRES,Cidre Fraîcheur,,4%,75cl,Léger vif et acidulé ! Parfait pour l’apéritif et les fruits de mers,"3,65 euros H.T.",,,,Prix de vente
+1,CIDRES,Cidre Tonique,,3%,75cl,Original citronné et très vif. Une belle surprise !,"4,50 euros H.T.",,,,Prix de vente
+1,CIDRES,Cidre Sauvage,,5 à 7%,75cl,Sec et extra brut + tonneau,"4,40 euros H.T.",,,,Prix de vente
+1,CIDRES,Terroir Chic,,"5,5%",33cl,Notre brut avec ses notes d’amertume,"1,71 euros H.T.",,,,Prix de vente
+1,CIDRES,Cidre Fruité,NOUVEAU,4%,33cl,Un demi-sec très rond alliant sucrosité et amertume avec délicatesse,"1,75 euros H.T.",,,,Prix de vente
+1,CIDRES,Cidre Fraîcheur,,4%,33cl,Léger vif et acidulé ! Parfait pour l’apéritif,"1,75 euros H.T.",,,,Prix de vente
+1,CIDRES,Cidre Tonique,,3%,33cl,Original citronné et très vif. Une belle surprise !,"1,75 euros H.T.",,,,Prix de vente
+1,CIDRES,Fût Corsé,,"5,5%",20 L,Notre brut avec ses notes d’amertume (existe en 30 litres),79 euros H.T.,,,,Prix de vente
+1,CIDRES,Fût Fraicheur,NOUVEAU,4%,20 L,Léger vif et acidulé ! Parfait pour l’apéritif et les fruits de mers,85 euros H.T.,,,,Prix de vente
+1,POIRE,Poiré,,"3,5%",75 cl,Poiré,"4,45 euros H.T.",,,,Prix de vente
+1,VINAIGRE,Vinaigre de Cidre,,5° d’acide acétique,50cl,Vinaigre non filtré,"2,30 euros H.T.",,,,Prix de vente
+2,JUS DE POMME,Jus de pomme,,,1 L,Jus pomme nature,"2,75 euros HT",,,,Prix de vente
+2,JUS DE POMME,Jus de pomme fraicheur,NOUVEAU,,1 L,Jus pomme nature acidulé 100% avrolles,"2,90 euros HT",,,,Prix de vente
+2,JUS DE POMME,Jus pétillant,,,"0,75 L",Jus pomme nature gazéifié,"3,05 euros HT",,,,Prix de vente
+2,JUS DE POMME,BIB Jus de pomme,,,5 L,Format familial de jus de pomme nature,"12,27 euros HT",,,,Prix de vente
+2,JUS 33 cl,Pomme Amour,,,33 cl,Jus pomme nature,"1,65 euros HT",,,,Prix de vente
+2,JUS 33 cl,Pomme Pétillant,,,33 cl,Jus pomme gazéifié,"1,79 euros HT",,,,Prix de vente
+2,JUS 33 cl,Pomme Basilic,,,33 cl,Basilic frais infusé dans du jus de pomme,"1,96 euros HT",,,,Prix de vente
+2,JUS 33 cl,Pomme Menthe,,,33 cl,Basilic frais infusé dans du jus de pomme,"1,96 euros HT",,,,Prix de vente
+2,JUS 33 cl,Pomme Framboise,,,33 cl,Pulpe de framboise mélangée à du jus de pomme,"1,89 euros HT",,,,Prix de vente
+2,JUS 33 cl,Pomme Myrtille,,,33 cl,Pulpe de myrtille mélangée à du jus de pomme,"1,89 euros HT",,,,Prix de vente
+2,JUS 33 cl,Pomme Rhubarbe,,,33 cl,Pulpe de rhubarbe mélangée à du jus de pomme,"1,89 euros HT",,,,Prix de vente
+2,JUS 75 cl,Pomme Basilic,NOUVEAU,,75 cl,Basilic frais infusé dans du jus de pomme,"3,30 euros HT",,,,Prix de vente
+2,JUS 75 cl,Pomme Menthe,NOUVEAU,,75 cl,Basilic frais infusé dans du jus de pomme,"3,30 euros HT",,,,Prix de vente
+2,JUS 75 cl,Pomme Framboise,NOUVEAU,,75 cl,Pulpe de framboise mélangée à du jus de pomme,"3,30 euros HT",,,,Prix de vente
+2,JUS 75 cl,Pomme Myrtille,NOUVEAU,,75 cl,Pulpe de myrtille mélangée à du jus de pomme,"3,30 euros HT",,,,Prix de vente
+3,APERITIFS,Cidre de glace,,"8,9",50 cl,,,,,"17,00 €",Prix de vente (droits inclus)
+3,APERITIFS,Cidre de glace,,"8,9",20 cl,,,,,"8,00 €",Prix de vente (droits inclus)
+3,APERITIFS,Pommeau de Normandie,,17,70 cl,,,"8,50 euros H.T.","1,47 euros","9,97 €",Prix de vente (Hors droits) / Droits / Prix de vente (droits inclus)
+3,APERITIFS,Pommeau de Normandie,,17,20 cl,,,"5,70 euros H.T.","0,42 euros","6,12, €",Prix de vente (Hors droits) / Droits / Prix de vente (droits inclus)
+3,APERITIFS,Esprit de Billy,,22,70 cl,,,"9,70 euros H.T.","3,83 euros","13,53 €",Prix de vente (Hors droits) / Droits / Prix de vente (droits inclus)
+3,CALVADOS,CALVADOS - 20 ANS,,43%,70 cl,,,"35,50 €","7,66 €","43,16 €",Prix de vente (hors droits) / Droits / Prix de vente H.T. (droits inclus)
+3,CALVADOS,CALVADOS - 12 ANS,,43%,70 cl,,,"27,50 €","7,66 €","35,16 €",Prix de vente (hors droits) / Droits / Prix de vente H.T. (droits inclus)
+3,CALVADOS,CALVADOS - HORS D'ÂGE,,43%,70 cl,,,"21,50 €","7,66 €","29,16 €",Prix de vente (hors droits) / Droits / Prix de vente H.T. (droits inclus)
+3,CALVADOS,CALVADOS - HORS D'ÂGE,,43%,20 cl,,,"9,23 €","2,30, €","11,53 €",Prix de vente (hors droits) / Droits / Prix de vente H.T. (droits inclus)
+3,CALVADOS,CALVADOS - V.S.O.P.,,41%,70 cl,,,"15,50 €","7,40 €","22,90 €",Prix de vente (hors droits) / Droits / Prix de vente H.T. (droits inclus)
+3,CALVADOS,CALVADOS - FINE,,41%,70 cl,,,"13,00 €","7,40 €","20,40 €",Prix de vente (hors droits) / Droits / Prix de vente H.T. (droits inclus)
+3,COFFRETS,COFFRET TRIO BOIS,,,,,,,,29 €,Prix de vente H.T. (droits inclus)
+3,COFFRETS,COFFRET TRIO+VERRE,NOUVEAU,,,,,,,33 €,Prix de vente H.T. (droits inclus)
