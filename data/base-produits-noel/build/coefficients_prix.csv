@@ -1,0 +1,33 @@
+niveau,cle,coefficient,commentaire
+categorie,BISCUITERIE,2.40,"Épicerie fine : coefficient courant 2,2 à 2,6 sur le prix d'achat HT"
+categorie,CONFISERIE,2.40,Idem biscuiterie
+categorie,EPICERIE_SUCREE,2.40,"Confitures, miels, pâtes à tartiner"
+categorie,EPICERIE_SALEE,2.40,"Condiments, vinaigres"
+categorie,TRAITEUR_SUCRE,2.30,Desserts appertisés
+categorie,TRAITEUR_CHARCUTERIE,2.20,"Produits carnés : rotation plus lente, coefficient plus prudent"
+categorie,TRAITEUR_MER,2.20,Idem charcuterie
+categorie,TRAITEUR_PLATS,2.20,Plats cuisinés
+categorie,BOISSON_SANS_ALCOOL,2.30,"Jus, thés, cafés"
+categorie,BOISSON_ALCOOLISEE,1.95,"Alcools : marché très comparable, coefficient plus faible"
+categorie,COSMETIQUE_BIEN_ETRE,2.50,"Cosmétique artisanale : coefficient traditionnellement plus élevé"
+categorie,ART_DE_LA_TABLE_ET_OBJET,2.30,Objets et contenants
+categorie,COFFRET_ET_EMBALLAGE,2.00,"Coffrets et packs : refacturés avec une marge modérée"
+categorie,INGREDIENT_PROFESSIONNEL,1.60,"Produits alimentaires intermédiaires : non destinés à la vente au détail"
+sous_categorie,SPIRITUEUX_POMME,1.75,"Calvados : prix de référence très connus du public"
+sous_categorie,SPIRITUEUX,1.75,"Gin, vodka, rhum"
+sous_categorie,LIQUEUR,1.80,
+sous_categorie,VIN,1.75,"Vin : coefficient caviste courant 1,6 à 1,9"
+sous_categorie,CIDRE,1.95,
+sous_categorie,BIERE,1.95,
+sous_categorie,POIRE,1.95,
+sous_categorie,POMMEAU,1.85,
+sous_categorie,CIDRE_DE_GLACE,1.85,
+sous_categorie,COCKTAIL_PRET_A_BOIRE,1.90,
+sous_categorie,HYDROMEL,1.95,
+sous_categorie,CARAMEL_VRAC,1.70,"Vrac : conditionné par nos soins, coefficient réduit"
+sous_categorie,PAI,1.60,Produits alimentaires intermédiaires
+palier,0-3,1.10,"Petits prix : coefficient majoré, la marge en euros reste faible"
+palier,3-8,1.00,Palier de référence
+palier,8-20,0.92,Dégressivité
+palier,20-40,0.85,Dégressivité
+palier,40-99999,0.80,"Produits chers : le coefficient plein rendrait le prix hors marché"

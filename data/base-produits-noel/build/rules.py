@@ -211,7 +211,16 @@ def origine_info(texte, categorie, sous_categorie, fournisseur_ref):
             break
     appellation_ingredient = bool(APPELLATION_INGREDIENT.search(texte))
 
-    if fournisseur_ref and fournisseur_ref.get("role", "").startswith("PRODUCTEUR"):
+    # L'adresse du PRODUCTEUR (ou du fabricant) fait preuve ; celle d'un
+    # distributeur ne prouve rien sur le lieu de fabrication.
+    role = (fournisseur_ref or {}).get("role", "")
+    dept = (fournisseur_ref or {}).get("departement", "")
+    adresse_exploitable = (
+        fournisseur_ref
+        and ("PRODUCTEUR" in role.upper() or "FABRICANT" in role.upper())
+        and dept not in ("", A_CONFIRMER)
+    )
+    if adresse_exploitable:
         return {
             "origine_pays": "France",
             "origine_region": fournisseur_ref.get("region", A_CONFIRMER),
@@ -219,7 +228,7 @@ def origine_info(texte, categorie, sous_categorie, fournisseur_ref):
             "lieu_fabrication": f"{A_CONFIRMER} (siège du producteur : "
             f"{fournisseur_ref.get('code_postal','')} {fournisseur_ref.get('ville','')})".strip(),
             "appellation": appellation or "",
-            "niveau_preuve_origine": "ADRESSE_PRODUCTEUR_DANS_LE_DOCUMENT",
+            "niveau_preuve_origine": "ADRESSE_DU_PRODUCTEUR",
             "caractere_local": "NORMANDIE_CONFIRMEE"
             if "Normandie" in fournisseur_ref.get("region", "")
             else A_CONFIRMER,
@@ -474,3 +483,21 @@ def classify_isigny(gamme, article):
         if pattern.search(gamme):
             return cat, sous, f"gamme « {gamme} » du catalogue Isigny"
     return "CONFISERIE", "CARAMEL", f"gamme « {gamme} » du catalogue Isigny (repli caramel)"
+
+
+# --------------------------------------------------------------------------
+# Matiere premiere : un atelier normand ne rend pas la matiere premiere
+# francaise. On le signale explicitement pour ne pas survendre le « local ».
+# --------------------------------------------------------------------------
+MATIERE_NON_FRANCAISE = re.compile(
+    r"(?i)\bcaf(é|e)\b|\bth(é|e)\b|tisane|rooibos|\bmat(é|e)\b|chocolat|cacao|"
+    r"cacahu(è|e)te|vanille|banane|kumquat|ananas|mangue|citron vert|noix de cajou|"
+    r"chorizo|piment d'espelette|curry|coco|limoncello|\brhum\b|olive")
+
+
+def alerte_matiere_premiere(texte, categorie):
+    if MATIERE_NON_FRANCAISE.search(texte):
+        return ("Transformé en Normandie, mais la matière première principale "
+                "(café, thé, cacao, fruit exotique, épice…) n'est pas française — "
+                "à ne pas présenter comme « produit 100 % local »")
+    return ""

@@ -70,10 +70,15 @@ Trois niveaux de preuve, jamais mélangés :
    « Beurre d'Isigny AOP », « Miel de Fleurs de Normandie » : indice commercial, pas une preuve.
    Classés `NORMANDIE_INDIQUEE_DANS_LE_NOM_A_VERIFIER`.
 
-**68 produits normands confirmés** sur 702 — dont 41 dans le Calvados et 4 dans la Manche.
-Les 634 autres ne sont pas « non normands » : leur origine n'est simplement **pas documentée**.
-Le tarif Normand Direct ne donne que le nom du producteur, jamais son adresse : c'est
-l'information n° 1 à demander.
+**702 produits normands confirmés** depuis que les adresses des 32 producteurs ont été
+renseignées — 388 dans le Calvados, 306 dans la Manche, 4 en Seine-Maritime, 2 dans
+l'Orne, 2 dans l'Eure.
+
+Nuance conservée : l'adresse connue est celle du **siège du producteur**, pas
+nécessairement de l'atelier — `lieu_fabrication` reste donc `À CONFIRMER`. Et
+**105 produits** sont transformés en Normandie à partir d'une matière première qui ne
+l'est pas (café, thé, cacao, fruits exotiques, épices) : la colonne
+`alerte_matiere_premiere` les signale, pour ne pas les présenter comme « 100 % locaux ».
 
 ## 5. Alcool
 
@@ -105,12 +110,32 @@ Les règles de classification sont dans des fichiers éditables, pas dans le cod
 
 | Donnée manquante | Conséquence | Où la saisir |
 |---|---|---|
-| **Prix de vente** | Marge, taux de marge et score de marge non calculables | `PRODUITS.prix_vente_ht` |
+| ~~Prix de vente~~ | **Proposés** : 701 produits chiffrés par coefficients de marché (voir §8). À valider. | `PRODUITS.prix_vente_ht` |
 | **Dimensions produits** | Choix automatique d'emballage et poids volumétrique impossibles | `PRODUITS.longueur_cm/largeur_cm/hauteur_cm` |
 | **Tarifs emballages** (RETIF, RAJA…) | Coût de coffret incomplet | `EMBALLAGES` |
 | **Tarifs transporteurs** | Coût d'expédition non calculable | `TARIFS_TRANSPORT` |
 | **Coûts de préparation** | Coût de revient incomplet | `PARAMETRES_MOTEUR` |
-| **Adresses des 28 producteurs** | 612 produits sans origine documentée | `FOURNISSEURS` |
+| ~~Adresses des producteurs~~ | **Fournies** le 01/09/2026 : 702 produits ont désormais une origine documentée | `FOURNISSEURS` |
 | **Conditions de personnalisation** | Aucune personnalisation vendable aujourd'hui | `PERSONNALISATION` |
 | **Minimums de commande globaux** | Seuls les multiples par produit sont connus | `FOURNISSEURS.minimum_commande` |
 | **Canal de commande Caramels d'Isigny** | Direct ou via Normand Direct ? | `FOURNISSEURS` |
+
+## 8. Prix de vente proposés
+
+701 produits sur 702 ont un prix de vente. **Ces prix ne proviennent d'aucun document** :
+ce sont des propositions calculées par coefficients, à valider avant toute mise en vente.
+Chaque ligne porte la mention `PRIX_PROPOSÉ – À VALIDER` et le détail de son calcul dans
+la colonne `calcul_prix_vente`.
+
+Modèle : `prix de vente HT = prix d'achat HT × coefficient de catégorie × coefficient de
+dégressivité` puis arrondi commercial (au dixième sous 20 €, au demi-euro au-dessus).
+
+Coefficients de catégorie (`build/coefficients_prix.csv`, éditable) : 2,40 en épicerie
+fine et biscuiterie, 2,50 en cosmétique artisanale, 2,20 en traiteur, 1,95 sur les
+cidres et bières, 1,75 sur les calvados, spiritueux et vins, 1,60 sur les produits
+professionnels. Dégressivité selon le prix d'achat : ×1,10 sous 3 €, ×1,00 de 3 à 8 €,
+×0,92 de 8 à 20 €, ×0,85 de 20 à 40 €, ×0,80 au-delà.
+
+Résultat : **taux de marge médian de 54,9 %** sur le produit seul, de 22 % à 63,7 %.
+Deux bornes accompagnent chaque prix : `prix_min_acceptable` (plancher à 35 % de marge)
+et `prix_max_conseille` (+25 %).
